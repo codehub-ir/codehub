@@ -1,3 +1,10 @@
+<p dir='rtl' align='right'><a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">
+ فارسی
+</a></p>
+<p dir='rtl' align='right'><a href="https://github.com/lnxpy/codehub/blob/master/README.md">
+ English
+</a></p>
+
 <h1 dir='rtl' align='right'>
 کد هاب
 </h1>
