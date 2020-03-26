@@ -3,6 +3,7 @@ from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
 import jdatetime
 from ckeditor.fields import RichTextField
+from .tasks import calendar
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
@@ -30,6 +31,7 @@ class Suggest(models.Model):
     title = models.CharField(max_length=30, verbose_name='عنوان')
     content = RichTextField(verbose_name='محتوا')
     theme = models.CharField(choices=COLOR_THEME, max_length=100, verbose_name='نگارش', default='suggest1')
+    pub_date = models.CharField(max_length=50, default=calendar(), verbose_name='تاریخ ثبت')
 
     def __str__(self):
         return self.title
