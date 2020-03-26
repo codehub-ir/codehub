@@ -1,0 +1,39 @@
+{% extends "snippet/base.html" %}
+
+{% block title %}
+خانه
+{% endblock%}
+
+{% block home %}
+active
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+{% for suggest in suggestions %}
+
+  <div class="part suggest {{suggest.theme}}">
+    <h2>{{suggest.title}}</h2>
+    <p>{{suggest.content|safe}}</p>
+  </div>
+
+{% endfor %}
+
+  <div class="jumbotron">
+    <h1>ایده کد هاب از کجا اومد؟</h1>
+    <p>یکی از بزرگترین مشکلات ما برنامه نویسا اینه که دنبال یک محیط برای اشتراک مشکلاتمون میگردیم. از اونجایی که تعدادی از سرویس های Pastebin برای ما محدود شده، تصمیم گرفتم کد هاب رو بسازم.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="part">
+    <h2>چرا کد هاب؟</h2>
+    <p>کد هاب رایگانه. یعنی شما هیچ احتیاجی به پرداخت پول برای استفاده از سرویس کد هاب ندارید. به راحتی میتونید هرجا که هستید، روی هر پلتفورمی از کد هاب استفاده کنید.</p>
+  </div>
+  <div class="part">
+    <h2>خبر خوب برای دوستان توسعه دهنده!</h2>
+    <p>کد هاب سرویس API هم داره. برای استفاده از این سرویس میتونید مستندات مربوط به API رو بخونید و لذت ببرید.</p>
+  </div>
+</div>
+{% endblock %}

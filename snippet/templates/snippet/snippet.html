@@ -1,0 +1,22 @@
+{% extends "snippet/base.html" %}
+{% load pygmentify_tags %}
+
+{% block title %}
+{{snippet.SID}}
+{% endblock %}
+
+{% block content %}
+<h2 id="myInput">{{snippet.title}}</h2>
+<hr>
+{% if snippet.detail %}
+<p>{{snippet.detail}}</p>
+{% endif %}
+
+<div class="code-block">
+  {% pygmentify %}
+  <pre class="{{snippet.language}}">{{snippet.script}}</pre>
+  {% endpygmentify %}
+</div>
+
+<p class="date">{{snippet.pub_date}}</p>
+{% endblock %}

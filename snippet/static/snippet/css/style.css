@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'yekan';
+  src: local('Yekan'),
+    url('../fonts/Yekan/Yekan.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'vazir';
+  src: local('Vzir'),
+    url('../fonts/Vazir/Vazir.ttf') format("truetype");
+}
+
+body {
+  font-family: vazir;
+  background-color: #f8f9fa;
+}
+
+main h1, h2, h3, h4, h5, h6 {
+  color: #4b4b4b;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+main p {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.line {
+  width: 45%;
+  background-color: #cfcfcf;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.code-block {
+  border: solid thin #bdbdbd;
+  direction: ltr;
+  text-align: left;
+  background-color: #e9ecef;
+  width: auto;
+  height: auto;
+  padding: 15px 0px 0px 15px;
+}
+
+.part {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  padding: 0 0 30px 0;
+  color: #4b4b4b;
+  font-size: 14px;
+}
+
+footer .context {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.date {
+  margin-top: 10px;
+  color: #949494;
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 60px;
+  margin-bottom: 60px
+}
+
+.api-url {
+  font-family: monospace;
+}
+
+.heading {
+  font-size: 30px;
+  color: #4b4b4b;
+}
+
+.heading:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.suggest{
+  padding: 20px 20px 20px 20px;
+  border: solid thin;
+  border-width: 2px;
+  border-image-slice: 1;
+}
+
+.suggest1{
+  border-image-source: linear-gradient(135deg, rgba(255,0,0,1) 13%, rgba(255,0,46,1) 28%, rgba(255,0,101,1) 43%, rgba(255,0,140,1) 57%, rgba(255,0,204,1) 73%, rgba(255,0,251,1) 87%);
+}
+
+.suggest2{
+  border-image-source: linear-gradient(139deg, rgba(255,0,0,1) 9%, rgba(253,232,45,1) 100%);
+}
+
+.suggest3{
+  border-image-source: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.suggest4{
+  border-image-source: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}

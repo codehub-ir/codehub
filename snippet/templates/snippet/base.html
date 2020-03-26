@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'snippet/css/bootstrap-rtl.min_.css' %}">
+  <link rel="stylesheet" href="{% static 'snippet/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'snippet/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'snippet/css/vs.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="{% static 'snippet/js/jquery-3.3.1.slim.min.js' %}"></script>
+  <script src="{% static 'snippet/js/popper.min.js' %}"></script>
+  <script src="{% static 'snippet/js/bootstrap.min.js' %}"></script>
+  <title>کد هاب • {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">کد هاب</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item {% block home %}{% endblock %}">
+          <a class="nav-link" href="{% url 'home' %}">خانه</a>
+        </li>
+        <li class="nav-item {% block new %}{% endblock %}">
+          <a class="nav-link" href="{% url 'new' %}">جدید</a>
+        </li>
+        <li class="nav-item {% block documentation %}{% endblock %}">
+          <a class="nav-link" href="{% url 'documentation' %}">مستندات</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        کد هاب در <a href="https://github.com/lnxpy/codehub" target="_blank">گیت هاب</a>
+      </span>
+    </div>
+  </nav>
+
+  <main>
+    <div class="d-flex justify-content-center">
+      <div class="col-md-8 p-5">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="context">
+        <strong>کد هاب</strong> ساخته شده با <span class="fa fa-heart"></span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

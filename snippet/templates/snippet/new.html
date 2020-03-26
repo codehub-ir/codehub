@@ -1,0 +1,43 @@
+{% extends "snippet/base.html" %}
+{% load widget_tweaks %}
+
+
+
+{% block title %}
+جدید
+{% endblock %}
+
+{% block new %}
+active
+{% endblock %}
+
+{% block content %}
+<form method="POST" class="post-form" spellcheck="false">{% csrf_token %}
+  <div class="form-group">
+    <label for="title">عنوان</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+  </div>
+
+  <div class="form-group">
+    <label for="detail">توضیحات بیشتر(اختیاری)</label>
+    <textarea class="form-control" rows="8" name="detail" placeholder="Details"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="script">اسکریپت</label>
+    <code>
+    <textarea class="form-control" rows="8" name="script" placeholder="Script"></textarea>
+    </code>
+  </div>
+
+  <div class="form-group">
+    <label for="language">زبان برنامه نویسی</label>
+    {{ form.language|add_class:"custom-select"}}
+  </div>
+  <br>
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-secondary">بساز</button>
+    <button type="reset" class="btn btn-outline-danger">پاک کن</button>
+  </div>
+</form>
+{% endblock %}

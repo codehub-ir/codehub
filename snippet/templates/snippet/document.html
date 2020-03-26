@@ -1,0 +1,154 @@
+{% extends "snippet/base.html" %}
+{% load pygmentify_tags %}
+
+{% block title %}
+مستندات
+{% endblock %}
+
+{% block documentation %}
+active
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-3">
+    <a href="#about" class="list-group-item list-group-item-action">درباره کد هاب</a>
+    <a href="#platform" class="list-group-item list-group-item-action">پلتفورم های استفاده شده</a>
+    <a href="#develop" class="list-group-item list-group-item-action">توسعه</a>
+    <a href="#api" class="list-group-item list-group-item-action">API</a>
+    <a href="#github" class="list-group-item list-group-item-action">گیت هاب</a>
+    <a href="#source" class="list-group-item list-group-item-action">منابع</a>
+  </div>
+
+  <div class="col-sm-9" style="word-wrap: break-word;">
+
+    <div id="about" class="section">
+      <a class="heading" href="#about">درباره کد هاب</a>
+      <p>کد هاب یک پلتفورم برای آرشیو کردن خطا ها، ایرادات و اسکریپت هایی هست که قصد دارید برای دیگران به اشتراک بذارید. نمونه کد هاب رو ممکنه خیلی جاها دیده باشید اما این پلتفورم کاملا فارسی، رایگان و همچنین قابل دسترس برای تمامی دوستان هست. </p>
+      <p>در کد هاب نه تنها میتونید مشکلات برنامه نویسی خودتون رو به اشتراک بذارید، بلکه به راحتی میتونید اسکریپت های کارساز و ماژول ها رو به صورت دستی بنویسید و در شبکه های اجتماعی برای دوستانتون ارسال کنید.</p>
+      <p>این پروژه کاملا متن باز هست و بوسیله GPL v3 لایسنس شده. شما به راحتی میتونید کد هاب رو توسعه بدید و با رعایت قوانین GPL، سرویس خودتون رو منتشر کنید.</p>
+    </div>
+
+    <div id="platform" class="section">
+      <a class="heading" href="#platform">پلتفورم های استفاده شده</a>
+      <p>من با استفاده از دو فریم ورک قدرتمند و محبوب بک اند و فرانت اند کد هاب رو نوشتم. برای تهیه اولین نسخه کد هاب قسمت بک اند از Django نسخه 3 و برای بخش دیزاین و فرانت اند از Bootstrap نسخه 4 استفاده کردم.</p>
+      <p>جنگو(Django) یک وب فریم ورک نوشته شده با زبان پایتون(Python) هست که بخاطر امنیت و قدرتی که داره همیشه در صدر بوده.</p>
+      <p>فریم ورک بوت استرپ(Bootstrap) یک فریم ورک کاملا Responsive برای CSS هست که به شما امکانات خیلی زیادی میده. به راحتی میتونید Template های خودتون رو در کمترین زمان با استفاده از این فریم ورک محبوب بسازید. راستش دلیل من برای استفاده از این
+        فریم ورک سادگی و کاربردی بودنشه.</p>
+      <p>با استفاده از لینک های زیر میتونید دو فریم ورک Bootstrap و Django رو به راحتی شروع به یادگیری کنید</p>
+      <a href="https://docs.djangoproject.com/en/3.0/intro/overview/" target="_blank">جنگو(Django)</a><br>
+      <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">بوت استرپ(Bootstrap)</a>
+    </div>
+
+    <div id="develop" class="section">
+      <a class="heading" href="#develop">توسعه</a>
+      <p>من در کنار سرویس HTTP کد هاب به فکر دوستان توسعه دهنده هم بودم و سرویس API رو هم طراحی کردم تا دوستان برنامه نویس به راحتی بتونن کد هاب رو روی پلتفورم های مختلف توسعه بدن و ازش استفاده کنن.</p>
+      <p>اگه به این کار علاقه دارین و دوست دارین یک محیط شبیه به کد هاب روی پلتفورم های دلخواهتون داشته باشین و دانشی از API ها ندارین پیشنهاد میکنم چند تا ویدئو از RESTful API ببینید و با مثال های کاربردیش در محیط های مختلف آشنا شید.</p>
+      <p>اصلا کار سختی نیست! کافیه یکم علاقه داشته باشین و قسمت بعدی رو با دقت بخونید. اونوقت شما هم میتونید یک توسعه دهنده باشید.</p>
+    </div>
+
+    <div id="api" class="section">
+      <a class="heading" href="#api">API</a>
+      <p>قطعا نمیشه API رو توی این تیکه آموزش داد ولی بیاید با یه توضیح مختصر از API ها شروع کنیم.</p>
+      <div>
+        <p>به زبان عامیانه تر، API مجموعه ای از روش های تعریف شده و شفاف به منظور ارتباط بین اجزا مختلف نرم افزار می باشد. یک API خوب با فراهم کردن سنگ بناهای لازم، توسعه یک نرم افزار کامپیوتری را آسان تر می کند. یک API می تواند برای یک سیستم تحت وب،
+          سیستم عامل، سیستم بانک اطلاعاتی، سخت افزار کامپیوتر و یا کتابخانه نرم افزار طراحی شده باشد.</p>
+        <p>مشخصات API می تواند شکل های مختلفی داشته باشد اما این مشخصات اغلب شامل روال ها، ساختمان داده ها، دسته های اشیا، متغیر ها یا دستورات فراخوانی می باشد. POSIX، Microsoft Windows API، C++ Standard Template Library و Java API مثال هایی از حالت
+          های مختلف API هستند. معمولا مستند سازی نیز برای API ها ارائه می شود تا استفاده از آن ها را راحت تر کند.</p>
+      </div>
+
+      <h3>خواندن اطلاعات با متد GET</h3>
+
+      <div class="input-group mb-3">
+        <input type="text" dir="ltr" class="form-control api-url" id="basic-url" aria-describedby="basic-addon3" readonly value="code-hub.ir/api/vX/snippet/OQkkSVbpKf">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">GET</span>
+        </div>
+      </div>
+
+      {% pygmentify %}
+      <div class="code-block">
+        <code>
+          <pre class="json">
+{
+    "SID":"OQkkSVbpKf",
+    "title":"TITLE",
+    "detail":"DETAILS",
+    "script":"SCRIPT",
+    "language":"python",
+    "pub_date":"۶ فروردین ۱۳۹۹",
+    "link":"http://code-hub.ir/api/v1/snippet/OQkkSVbpKf"
+}
+</pre></code>
+      </div>
+      {% endpygmentify %}
+
+      <br>
+
+      <h3>اضافه کردن اطلاعات با متد POST</h3>
+
+      <div class="input-group mb-3">
+        <input type="text" dir="ltr" class="form-control api-url" id="basic-url" aria-describedby="basic-addon3" readonly value="code-hub.ir/api/vX/snippet/">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">POST</span>
+        </div>
+      </div>
+
+      <h5>ساختار داده ارسالی</h5>
+
+      {% pygmentify %}
+      <div class="code-block">
+        <code>
+          <pre class="json">
+{
+    "title": "TITLE",
+    "detail": "DETAILS",
+    "script": "SCRIPT",
+    "language": "python",
+}
+</pre></code>
+      </div>
+      {% endpygmentify %}
+
+      <br>
+      <h5>ساختار داده بازگشتی</h5>
+
+      {% pygmentify %}
+      <div class="code-block">
+        <code>
+          <pre class="json">
+{
+    "SID":"OQkkSVbpKf",
+    "title":"TITLE",
+    "detail":"DETAILS",
+    "script":"SCRIPT",
+    "language":"python",
+    "pub_date":"۶ فروردین ۱۳۹۹",
+    "link":"http://code-hub.ir/api/v1/snippet/OQkkSVbpKf"
+}
+</pre></code>
+      </div>
+      {% endpygmentify %}
+      <br>
+      <h6>نکته: توجه کنید vX در لینک ها به معنی نسخه سرویس API هست. نسخه 1 برای این سرویس در دسترسه پس در لینک ها vX رو به v1 تبدیل کنید.</h6>
+
+    </div>
+
+    <div id="github" class="section">
+      <a class="heading" href="#github">گیت هاب</a>
+      <p>پروژه کد هاب روی گیت هاب قابل دسترسه. میتونید از <a href="https://github.com/lnxpy/codehub" target="_blank">اینجا</a> وارد گیت هاب کد هاب شید و اطلاعات بیشتر از پروژه رو اونجا ببینید.</p>
+      <p>راستی، ستاره یادتون نره. &#128519; &#127775;</p>
+    </div>
+
+
+    <div id="source" class="section">
+      <a class="heading" href="#source">منابع</a>
+      <ul style="list-style-type:none;">
+        <li><a href="http://mediasoft.ir/api-%db%8c%d8%a7-%d8%b1%d8%a7%d8%a8%d8%b7-%da%a9%d8%a7%d8%b1%d8%a8%d8%b1%d8%af%db%8c-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d9%87-%d9%86%d9%88%db%8c%d8%b3%db%8c-%da%86%db%8c%d8%b3%d8%aa%d8%9f/">مدیا سافت</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
