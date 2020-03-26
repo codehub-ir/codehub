@@ -1,4 +1,4 @@
-from .models import Snippet
+from . import models
 from random import choice as rnd
 import string
 from codehub import settings
@@ -15,7 +15,7 @@ def generator():
 
 def detector(val):
     try:
-        query = Snippet.objects.get(SID=val)
+        query = models.Snippet.objects.get(SID=val)
         return True
     except:
         return False
@@ -25,5 +25,4 @@ def calendar():
     new_day = ''.join([settings.PERSIAN_NUM[int(i)] for i in str(date.day)])
     new_mon = settings.JALALI_CAL[date.month]
     new_year = ''.join([settings.PERSIAN_NUM[int(i)] for i in str(date.year)])
-    print('%s %s %s'%(new_year, new_mon, new_day))
     return '%s %s %s'%(new_day, new_mon, new_year)
