@@ -1,0 +1,13 @@
+asgiref==3.2.5
+beautifulsoup4==4.8.2
+Django==3.0.4
+django-ckeditor==5.9.0
+django-js-asset==1.2.2
+django-pygmentify==0.3.7
+django-widget-tweaks==1.4.8
+djangorestframework==3.11.0
+jdatetime==3.6.2
+Pygments==2.6.1
+pytz==2019.3
+soupsieve==2.0
+sqlparse==0.3.1
