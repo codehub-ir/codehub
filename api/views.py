@@ -18,7 +18,7 @@ class AddSnippet(generics.CreateAPIView):
         data = request.data.copy()
         data['SID'] = generator()
         data['pub_date'] = calendar()
-        data['link'] = 'http://codehub.pythonanywhere.com/api/v1/snippet/'+data['SID']
+        data['link'] = 'http://codehub.pythonanywhere.com/snippet/'+data['SID']
         serializer = SnippetSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
