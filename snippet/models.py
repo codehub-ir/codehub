@@ -1,7 +1,6 @@
 from django.db import models
 from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles
-import jdatetime
 from ckeditor.fields import RichTextField
 from .tasks import calendar
 from django.utils.translation import gettext as _
@@ -11,10 +10,10 @@ LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
 STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 
 COLOR_THEME = [
-    ('suggest1',_('red-pink')),
-    ('suggest2',_('red-yellow')),
-    ('suggest3',_('yellow-blue')),
-    ('suggest4',_('pink-blue smooth')),
+    ('suggest1', _('red-pink')),
+    ('suggest2', _('red-yellow')),
+    ('suggest3', _('yellow-blue')),
+    ('suggest4', _('pink-blue smooth')),
 ]
 
 class Snippet(models.Model):
@@ -27,7 +26,7 @@ class Snippet(models.Model):
     link = models.URLField(verbose_name=_('URL Address'))
 
     def __str__(self):
-        return '%s ~~ %s ~~ %s'%(self.SID, self.title, self.pub_date)
+        return self.title
 
 class Suggest(models.Model):
     title = models.CharField(max_length=30, verbose_name=_('Title'))
