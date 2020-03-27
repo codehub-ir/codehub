@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 19:54+0430\n"
+"POT-Creation-Date: 2020-03-27 20:00+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,18 +18,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: models.py:13
+#: snippet/models.py:14
 msgid "red-pink"
 msgstr "قرمز صورتی"
 
-#: models.py:14
+#: snippet/models.py:15
 msgid "red-yellow"
 msgstr "قرمز زرد"
 
-#: models.py:15
+#: snippet/models.py:16
 msgid "yellow-blue"
 msgstr "زرد آبی"
 
-#: models.py:16
+#: snippet/models.py:17
 msgid "pink-blue smooth"
 msgstr "صورتی آبی ملایم"
+
+#: snippet/models.py:21
+msgid "SID"
+msgstr "شناسه"
+
+#: snippet/models.py:22 snippet/models.py:33
+msgid "Title"
+msgstr "عنوان"
+
+#: snippet/models.py:23
+msgid "Details"
+msgstr "جزئیات"
+
+#: snippet/models.py:24
+msgid "Script"
+msgstr "اسکریپت"
+
+#: snippet/models.py:25
+msgid "Programming language"
+msgstr "زبان برنامه نویسی"
+
+#: snippet/models.py:26 snippet/models.py:36
+msgid "Submition date"
+msgstr "تاریخ ثبت"
+
+#: snippet/models.py:27
+msgid "URL Address"
+msgstr "آدرس"
+
+#: snippet/models.py:34
+msgid "Content"
+msgstr "محتوا"
+
+#: snippet/models.py:35
+msgid "Style"
+msgstr "نگارش"
