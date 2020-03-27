@@ -3,7 +3,7 @@ from snippet.models import Snippet
 from .serializers import SnippetSerializer
 from rest_framework.response import Response
 from rest_framework import status
-from snippet.tasks import calendar, generator
+from snippet.tasks import calendar, sid_generator
 
 class DetailSnippet(generics.RetrieveAPIView):
     queryset = Snippet.objects.all()
@@ -16,7 +16,7 @@ class AddSnippet(generics.CreateAPIView):
 
     def post(self, request, format=None):
         data = request.data.copy()
-        data['SID'] = generator()
+        data['SID'] = sid_generator()
         data['pub_date'] = calendar()
         data['link'] = 'http://codehub.pythonanywhere.com/snippet/'+data['SID']
         serializer = SnippetSerializer(data=data)
