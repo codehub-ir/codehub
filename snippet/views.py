@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SnippetForm
 from .models import Snippet, Suggest
 from .tasks import sid_generator, calendar
+from codehub import settings
 
 
 def index(request):
@@ -25,6 +26,7 @@ def new(request):
             post.script = request.POST.get('script')
             post.language = request.POST.get('language')
             post.pub_date = calendar()
+            post.link = settings.WEBSITE_ADDR + post.SID
             post.save()
             return redirect('show', id=post.SID)
     else:
