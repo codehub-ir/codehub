@@ -1,19 +1,20 @@
 from . import models
-from random import choice as rnd
+from random import choice
 import string
 from codehub import settings
 from jdatetime import datetime
 
 
-def generator():
-    lnk = ''.join([rnd(string.ascii_letters) for i in range(10)])
-    if detector(lnk):
-        generator()
+def sid_generator():
+    letters = string.ascii_letters
+    id = ''.join(choice(letters) for i in range(10))
+    if sid_detector(id):
+        sid_generator()
     else:
-        return lnk
+        return id
 
 
-def detector(val):
+def sid_detector(val):
     try:
         query = models.Snippet.objects.get(SID=val)
         return True
