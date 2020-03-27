@@ -3,12 +3,16 @@ from .forms import SnippetForm
 from .models import Snippet, Suggest
 from .tasks import sid_generator, calendar
 
+
 def index(request):
     suggestions = Suggest.objects.all()
-    return render(request, 'snippet/index.html', {'suggestions':suggestions[::-1]})
+    return render(request, 'snippet/index.html', {
+        'suggestions': suggestions[::-1]})
+
 
 def docpage(request):
     return render(request, 'snippet/document.html', {})
+
 
 def new(request):
     if request.method == "POST":
@@ -27,6 +31,7 @@ def new(request):
         form = SnippetForm()
     return render(request, 'snippet/new.html', {'form': form})
 
+
 def show(request, id):
     query = get_object_or_404(Snippet, SID=id)
-    return render(request, 'snippet/snippet.html', {'snippet':query})
+    return render(request, 'snippet/snippet.html', {'snippet': query})

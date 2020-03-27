@@ -16,23 +16,31 @@ COLOR_THEME = [
     ('suggest4', _('pink-blue smooth')),
 ]
 
+
 class Snippet(models.Model):
     SID = models.CharField(max_length=10, verbose_name=_('SID'))
     title = models.CharField(max_length=100, verbose_name=_('Title'))
     detail = models.TextField(blank=True, verbose_name=_('Details'))
     script = models.TextField(verbose_name=_('Script'))
-    language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100, verbose_name=_('Programming language'))
-    pub_date = models.CharField(max_length=50, verbose_name=_('Submition date'))
+    language = models.CharField(choices=LANGUAGE_CHOICES,
+                                default='python',
+                                max_length=100,
+                                verbose_name=_('Programming language'))
+    pub_date = models.CharField(max_length=50,
+                                verbose_name=_('Submition date'))
     link = models.URLField(verbose_name=_('URL Address'))
 
     def __str__(self):
         return self.title
 
+
 class Suggest(models.Model):
     title = models.CharField(max_length=30, verbose_name=_('Title'))
     content = RichTextField(verbose_name=_('Content'))
-    theme = models.CharField(choices=COLOR_THEME, max_length=100, verbose_name=_('Style'), default='suggest1')
-    pub_date = models.CharField(max_length=50, default=calendar(), verbose_name=_('Submition date'))
+    theme = models.CharField(choices=COLOR_THEME, max_length=100,
+                             verbose_name=_('Style'), default='suggest1')
+    pub_date = models.CharField(max_length=50, default=calendar(),
+                                verbose_name=_('Submition date'))
 
     def __str__(self):
         return self.title
