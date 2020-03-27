@@ -5,10 +5,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from snippet.tasks import calendar, sid_generator
 
+
 class DetailSnippet(generics.RetrieveAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
     lookup_field = 'SID'
+
 
 class AddSnippet(generics.CreateAPIView):
     queryset = Snippet.objects.all()
