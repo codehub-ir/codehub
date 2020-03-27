@@ -4,15 +4,16 @@ from pygments.styles import get_all_styles
 import jdatetime
 from ckeditor.fields import RichTextField
 from .tasks import calendar
+from django.utils.translation import gettext as _
 
 LEXERS = [item for item in get_all_lexers() if item[1]]
 LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
 STYLE_CHOICES = sorted([(item, item) for item in get_all_styles()])
 COLOR_THEME = [
-    ('suggest1','قرمز صورتی'),
-    ('suggest2','قرمز زرد'),
-    ('suggest3','زرد آبی'),
-    ('suggest4','صورتی آبی ملایم'),
+    ('suggest1',_('red-pink')),
+    ('suggest2',_('red-yellow')),
+    ('suggest3',_('yellow-blue')),
+    ('suggest4',_('pink-blue smooth')),
 ]
 
 class Snippet(models.Model):
