@@ -25,7 +25,7 @@ SECRET_KEY = 'mb9$(15_ent*e9jtz857@!fj_+((qd2e6k72*ke83&r%$vfs*5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['codehub.pythonanywhere.com']
+ALLOWED_HOSTS = ['codehub.pythonanywhere.com', 'localhost']
 
 # Application definition
 
@@ -123,6 +123,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+
+# Handmade settings
+
 
 JALALI_CAL = {
     1: 'فروردین',
@@ -152,11 +164,4 @@ PERSIAN_NUM = {
     9: '۹'
 }
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+WEBSITE_ADDR = 'http://%s/'%ALLOWED_HOSTS[0]
