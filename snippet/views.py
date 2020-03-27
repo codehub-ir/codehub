@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SnippetForm
 from .models import Snippet, Suggest
-from .tasks import generator, calendar
+from .tasks import sid_generator, calendar
 
 def index(request):
     suggestions = Suggest.objects.all()
@@ -15,7 +15,7 @@ def new(request):
         form = SnippetForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.SID = generator()
+            post.SID = sid_generator()
             post.title = request.POST.get('title')
             post.detail = request.POST.get('detail')
             post.script = request.POST.get('script')
