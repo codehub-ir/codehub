@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-28 16:24+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: codehub/settings.py:142
+msgid "Farvardin"
+msgstr "فروردین"
+
+#: codehub/settings.py:143
+msgid "Ordibehesht"
+msgstr "اردیبهشت"
+
+#: codehub/settings.py:144
+msgid "Khordad"
+msgstr "خرداد"
+
+#: codehub/settings.py:145
+msgid "Tir"
+msgstr "تیر"
+
+#: codehub/settings.py:146
+msgid "Mordad"
+msgstr "مرداد"
+
+#: codehub/settings.py:147
+msgid "Shahrivar"
+msgstr "شهریور"
+
+#: codehub/settings.py:148
+msgid "Mehr"
+msgstr "مهر"
+
+#: codehub/settings.py:149
+msgid "Aban"
+msgstr "آبان"
+
+#: codehub/settings.py:150
+msgid "Azar"
+msgstr "آذر"
+
+#: codehub/settings.py:151
+msgid "Dey"
+msgstr "دی"
+
+#: codehub/settings.py:152
+msgid "Bahman"
+msgstr "بهمن"
+
+#: codehub/settings.py:153
+msgid "Esfand"
+msgstr "اسفند"
+
+#: codehub/settings.py:157
+msgid "0"
+msgstr "۰"
+
+#: codehub/settings.py:158
+msgid "1"
+msgstr "۱"
+
+#: codehub/settings.py:159
+msgid "2"
+msgstr "۲"
+
+#: codehub/settings.py:160
+msgid "3"
+msgstr "۳"
+
+#: codehub/settings.py:161
+msgid "4"
+msgstr "۴"
+
+#: codehub/settings.py:162
+msgid "5"
+msgstr "۵"
+
+#: codehub/settings.py:163
+msgid "6"
+msgstr "۶"
+
+#: codehub/settings.py:164
+msgid "7"
+msgstr "۷"
+
+#: codehub/settings.py:165
+msgid "8"
+msgstr "۸"
+
+#: codehub/settings.py:166
+msgid "9"
+msgstr "۹"
+
+#: snippet/models.py:13
+msgid "red-pink"
+msgstr "قرمز صورتی"
+
+#: snippet/models.py:14
+msgid "red-yellow"
+msgstr "قرمز زرد"
+
+#: snippet/models.py:15
+msgid "yellow-blue"
+msgstr "زرد آبی"
+
+#: snippet/models.py:16
+msgid "pink-blue smooth"
+msgstr "صورتی آبی ملایم"
+
+#: snippet/models.py:21
+msgid "SID"
+msgstr "شناسه"
+
+#: snippet/models.py:22 snippet/models.py:38
+msgid "Title"
+msgstr "عنوان"
+
+#: snippet/models.py:23
+msgid "Details"
+msgstr "جزئیات"
+
+#: snippet/models.py:24
+msgid "Script"
+msgstr "اسکریپت"
+
+#: snippet/models.py:28
+msgid "Programming language"
+msgstr "زبان برنامه نویسی"
+
+#: snippet/models.py:30 snippet/models.py:43
+msgid "Submition date"
+msgstr "تاریخ ثبت"
+
+#: snippet/models.py:31
+msgid "URL Address"
+msgstr "آدرس"
+
+#: snippet/models.py:39
+msgid "Content"
+msgstr "محتوا"
+
+#: snippet/models.py:41
+msgid "Style"
+msgstr "نگارش"
