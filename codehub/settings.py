@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -137,31 +138,35 @@ except ImportError:
 
 
 JALALI_CAL = {
-    1: 'فروردین',
-    2: 'اردیبهشت',
-    3: 'خرداد',
-    4: 'تیر',
-    5: 'مرداد',
-    6: 'شهریور',
-    7: 'مهر',
-    8: 'آبان',
-    9: 'آذر',
-    10: 'دی',
-    11: 'بهمن',
-    12: 'اسفند'
+    1: _('Farvardin'),
+    2: _('Ordibehesht'),
+    3: _('Khordad'),
+    4: _('Tir'),
+    5: _('Mordad'),
+    6: _('Shahrivar'),
+    7: _('Mehr'),
+    8: _('Aban'),
+    9: _('Azar'),
+    10: _('Dey'),
+    11: _('Bahman'),
+    12: _('Esfand')
 }
 
 PERSIAN_NUM = {
-    0: '۰',
-    1: '۱',
-    2: '۲',
-    3: '۳',
-    4: '۴',
-    5: '۵',
-    6: '۶',
-    7: '۷',
-    8: '۸',
-    9: '۹'
+    0: _('0'),
+    1: _('1'),
+    2: _('2'),
+    3: _('3'),
+    4: _('4'),
+    5: _('5'),
+    6: _('6'),
+    7: _('7'),
+    8: _('8'),
+    9: _('9')
 }
 
 WEBSITE_ADDR = 'http://%s/'%ALLOWED_HOSTS[0]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR,'locale'),
+]
