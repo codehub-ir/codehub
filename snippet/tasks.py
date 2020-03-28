@@ -24,7 +24,7 @@ def sid_detector(val):
 
 def calendar():
     date = datetime.now()
-    new_day = ''.join([settings.PERSIAN_NUM[int(i)] for i in str(date.day)])
+    new_day = ''.join([str(settings.PERSIAN_NUM[int(i)]) for i in str(date.day)])
     new_mon = settings.JALALI_CAL[date.month]
-    new_year = ''.join([settings.PERSIAN_NUM[int(i)] for i in str(date.year)])
+    new_year = ''.join([str(settings.PERSIAN_NUM[int(i)]) for i in str(date.year)])
     return '%s %s %s' % (new_day, new_mon, new_year)
