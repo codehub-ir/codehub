@@ -4,7 +4,7 @@
 
 # CodeHub
 codehub is a platform for archiving the errors, bugs, and scripts you intend to share with others. You may have seen the other samples anywhere but this platform is completely Persian, free and also accessible to all friends.
-Not only can you share your programming problems in code hubs, but you can also easily write handy scripts and modules and send them to your friends on social networks.
+Not only can you share your programming problems in codehub, but you can also easily write handy scripts and modules and send them to your friends on social networks.
 
 # Platforms
 I used Django version 3 for the first version of the backend part, and Bootstrap version 4 for the front one.
