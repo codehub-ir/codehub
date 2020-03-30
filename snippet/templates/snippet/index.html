@@ -2,10 +2,26 @@
 {% load static %}
 
 {% block meta %}
+<!-- Primary Meta Tags -->
+<meta name="description" content="یکی از بزرگترین مشکلات ما برنامه نویسا اینه که دنبال یک محیط برای اشتراک مشکلاتمون میگردیم. ">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{% url 'home' %}">
+<meta property="og:title" content="کد هاب • سرویس پیست بین پارسی">
+<meta property="og:description" content="یکی از بزرگترین مشکلات ما برنامه نویسا اینه که دنبال یک محیط برای اشتراک مشکلاتمون میگردیم. ">
+<meta property="og:image" content="{% static 'snippet/img/banner.png' %}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{% url 'home' %}">
+<meta property="twitter:title" content="کد هاب • سرویس پیست بین پارسی">
+<meta property="twitter:description" content="یکی از بزرگترین مشکلات ما برنامه نویسا اینه که دنبال یک محیط برای اشتراک مشکلاتمون میگردیم. ">
+<meta property="twitter:image" content="{% static 'snippet/img/banner.png' %}">
 {% endblock %}
 
 {% block title %}
-خانه
+سرویس پیست بین پارسی
 {% endblock%}
 
 {% block home %}

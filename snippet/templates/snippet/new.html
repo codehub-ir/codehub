@@ -3,10 +3,24 @@
 {% load static %}
 
 {% block meta %}
+<!-- Primary Meta Tags -->
+<meta name="description" content="ساخت اسنیپ جدید.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{% url 'new' %}">
+<meta property="og:title" content="کد هاب • ساخت اسنیپ جدید">
+<meta property="og:description" content="ساخت اسنیپ جدید.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{% url 'new' %}">
+<meta property="twitter:title" content="کد هاب • ساخت اسنیپ جدید">
+<meta property="twitter:description" content="ساخت اسنیپ جدید.">
 {% endblock %}
 
 {% block title %}
-جدید
+ساخت اسنیپ جدید
 {% endblock %}
 
 {% block new %}
