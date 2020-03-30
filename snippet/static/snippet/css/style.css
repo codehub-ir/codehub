@@ -19,6 +19,10 @@ main h1, h2, h3, h4, h5, h6 {
   color: #4b4b4b;
 }
 
+main {
+  margin-top: 80px;
+}
+
 h1 {
   font-size: 35px;
 }
@@ -96,30 +100,30 @@ footer .context {
   color: #4b4b4b;
 }
 
-.heading:hover{
+.heading:hover {
   color: black;
   text-decoration: none;
 }
 
-.suggest{
+.suggest {
   padding: 20px 20px 0px 20px;
   border: solid thin;
   border-width: 2px;
   border-image-slice: 1;
 }
 
-.suggest1{
-  border-image-source: linear-gradient(135deg, rgba(255,0,0,1) 13%, rgba(255,0,46,1) 28%, rgba(255,0,101,1) 43%, rgba(255,0,140,1) 57%, rgba(255,0,204,1) 73%, rgba(255,0,251,1) 87%);
+.suggest1 {
+  border-image-source: linear-gradient(135deg, rgba(255, 0, 0, 1) 13%, rgba(255, 0, 46, 1) 28%, rgba(255, 0, 101, 1) 43%, rgba(255, 0, 140, 1) 57%, rgba(255, 0, 204, 1) 73%, rgba(255, 0, 251, 1) 87%);
 }
 
-.suggest2{
-  border-image-source: linear-gradient(139deg, rgba(255,0,0,1) 9%, rgba(253,232,45,1) 100%);
+.suggest2 {
+  border-image-source: linear-gradient(139deg, rgba(255, 0, 0, 1) 9%, rgba(253, 232, 45, 1) 100%);
 }
 
-.suggest3{
-  border-image-source: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+.suggest3 {
+  border-image-source: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 }
 
-.suggest4{
-  border-image-source: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+.suggest4 {
+  border-image-source: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
