@@ -1,5 +1,5 @@
 <p dir='rtl' align='right'><a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">
- فارسی
+پارسی
 </a></p>
 <p dir='rtl' align='right'><a href="https://github.com/lnxpy/codehub/blob/master/README.md">
  English

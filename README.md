@@ -1,4 +1,4 @@
-[فارسی](https://github.com/lnxpy/codehub/blob/master/README_fa.md)
+[پارسی](https://github.com/lnxpy/codehub/blob/master/README_fa.md)
 
 [English](https://github.com/lnxpy/codehub/blob/master/README.md)
 
