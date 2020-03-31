@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SnippetForm
-from .models import Snippet, Suggest
+from .models import Snippet, Suggest, Teammate
 from .tasks import sid_generator, calendar
 from codehub import settings
 
@@ -37,3 +37,7 @@ def new(request):
 def show(request, id):
     query = get_object_or_404(Snippet, SID=id)
     return render(request, 'snippet/snippet.html', {'snippet': query})
+
+def team(request):
+    teammates = Teammate.objects.all()
+    return render(request, 'snippet/team.html', {'teammates': teammates})
