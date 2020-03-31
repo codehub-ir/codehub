@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 16:24+0430\n"
+"POT-Creation-Date: 2020-03-31 15:40+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,91 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: codehub/settings.py:142
+#: codehub/settings.py:141
 msgid "Farvardin"
 msgstr "فروردین"
 
-#: codehub/settings.py:143
+#: codehub/settings.py:142
 msgid "Ordibehesht"
 msgstr "اردیبهشت"
 
-#: codehub/settings.py:144
+#: codehub/settings.py:143
 msgid "Khordad"
 msgstr "خرداد"
 
-#: codehub/settings.py:145
+#: codehub/settings.py:144
 msgid "Tir"
 msgstr "تیر"
 
-#: codehub/settings.py:146
+#: codehub/settings.py:145
 msgid "Mordad"
 msgstr "مرداد"
 
-#: codehub/settings.py:147
+#: codehub/settings.py:146
 msgid "Shahrivar"
 msgstr "شهریور"
 
-#: codehub/settings.py:148
+#: codehub/settings.py:147
 msgid "Mehr"
 msgstr "مهر"
 
-#: codehub/settings.py:149
+#: codehub/settings.py:148
 msgid "Aban"
 msgstr "آبان"
 
-#: codehub/settings.py:150
+#: codehub/settings.py:149
 msgid "Azar"
 msgstr "آذر"
 
-#: codehub/settings.py:151
+#: codehub/settings.py:150
 msgid "Dey"
 msgstr "دی"
 
-#: codehub/settings.py:152
+#: codehub/settings.py:151
 msgid "Bahman"
 msgstr "بهمن"
 
-#: codehub/settings.py:153
+#: codehub/settings.py:152
 msgid "Esfand"
 msgstr "اسفند"
 
-#: codehub/settings.py:157
+#: codehub/settings.py:156
 msgid "0"
 msgstr "۰"
 
-#: codehub/settings.py:158
+#: codehub/settings.py:157
 msgid "1"
 msgstr "۱"
 
-#: codehub/settings.py:159
+#: codehub/settings.py:158
 msgid "2"
 msgstr "۲"
 
-#: codehub/settings.py:160
+#: codehub/settings.py:159
 msgid "3"
 msgstr "۳"
 
-#: codehub/settings.py:161
+#: codehub/settings.py:160
 msgid "4"
 msgstr "۴"
 
-#: codehub/settings.py:162
+#: codehub/settings.py:161
 msgid "5"
 msgstr "۵"
 
-#: codehub/settings.py:163
+#: codehub/settings.py:162
 msgid "6"
 msgstr "۶"
 
-#: codehub/settings.py:164
+#: codehub/settings.py:163
 msgid "7"
 msgstr "۷"
 
-#: codehub/settings.py:165
+#: codehub/settings.py:164
 msgid "8"
 msgstr "۸"
 
-#: codehub/settings.py:166
+#: codehub/settings.py:165
 msgid "9"
 msgstr "۹"
 
@@ -157,3 +157,31 @@ msgstr "محتوا"
 #: snippet/models.py:41
 msgid "Style"
 msgstr "نگارش"
+
+#: snippet/models.py:49
+msgid "name"
+msgstr "نام و نام خانوادگی"
+
+#: snippet/models.py:50
+msgid "position"
+msgstr "مسئولیت"
+
+#: snippet/models.py:51
+msgid "passion"
+msgstr "اشتیاق"
+
+#: snippet/models.py:52
+msgid "github profile"
+msgstr "پروفایل گیت هاب"
+
+#: snippet/models.py:53
+msgid "linkedin profile"
+msgstr "پروفایل لینکدین"
+
+#: snippet/models.py:54
+msgid "twitter profile"
+msgstr "پروفایل توییتر"
+
+#: snippet/models.py:55
+msgid "gmail address"
+msgstr "آدرس جیمیل"
