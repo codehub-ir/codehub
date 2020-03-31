@@ -114,6 +114,7 @@ footer .context {
   border: solid thin;
   border-width: 2px;
   border-image-slice: 1;
+  margin-top: 0px;
 }
 
 .suggest1 {
