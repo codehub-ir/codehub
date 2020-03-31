@@ -47,13 +47,14 @@ class Suggest(models.Model):
         return self.title
 
 class Teammate(models.Model):
-    name = models.CharField(max_length=25, verbose_name=_('name'))
-    position = models.CharField(max_length=50, verbose_name=_('position'))
-    passion = models.CharField(max_length=100, verbose_name=_('passion'))
-    github = models.URLField(blank=True, verbose_name=_('github profile'))
-    linkedin = models.URLField(blank=True, verbose_name=_('linkedin profile'))
-    twitter = models.URLField(blank=True, verbose_name=_('twitter profile'))
-    gmail = models.EmailField(blank=True, verbose_name=_('gmail address'))
+    name = models.CharField(max_length=25, verbose_name=_('Name'))
+    position = models.CharField(max_length=50, verbose_name=_('Position'))
+    passion = models.CharField(max_length=100, verbose_name=_('Passion'))
+    support_side = models.CharField(max_length=50, verbose_name=_('Support Side'))
+    github = models.URLField(blank=True, verbose_name=_('Github Profile'))
+    linkedin = models.URLField(blank=True, verbose_name=_('Linkedin Profile'))
+    twitter = models.URLField(blank=True, verbose_name=_('Twitter Profile'))
+    gmail = models.EmailField(blank=True, verbose_name=_('Gmail Address'))
 
     def __str__(self):
         return '%s (%s)' % (self.name, self.position)
