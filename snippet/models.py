@@ -14,6 +14,7 @@ COLOR_THEME = [
     ('suggest2', _('red-yellow')),
     ('suggest3', _('yellow-blue')),
     ('suggest4', _('pink-blue smooth')),
+    ('suggest5', _('green-cyan')),
 ]
 
 
