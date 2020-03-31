@@ -44,3 +44,15 @@ class Suggest(models.Model):
 
     def __str__(self):
         return self.title
+
+class Teammate(models.Model):
+    name = models.CharField(max_length=25, verbose_name=_('name'))
+    position = models.CharField(max_length=50, verbose_name=_('position'))
+    passion = models.CharField(max_length=100, verbose_name=_('passion'))
+    github = models.URLField(blank=True, verbose_name=_('github profile'))
+    linkedin = models.URLField(blank=True, verbose_name=_('linkedin profile'))
+    twitter = models.URLField(blank=True, verbose_name=_('twitter profile'))
+    gmail = models.EmailField(blank=True, verbose_name=_('gmail address'))
+
+    def __str__(self):
+        return '%s (%s)' % (self.name, self.position)
