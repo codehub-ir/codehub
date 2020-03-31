@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-31 22:30+0430\n"
+"POT-Creation-Date: 2020-04-01 03:03+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -163,29 +163,33 @@ msgid "Style"
 msgstr "نگارش"
 
 #: snippet/models.py:50
-msgid "name"
+msgid "Name"
 msgstr "نام و نام خانوادگی"
 
 #: snippet/models.py:51
-msgid "position"
+msgid "Position"
 msgstr "مسئولیت"
 
 #: snippet/models.py:52
-msgid "passion"
+msgid "Passion"
 msgstr "اشتیاق"
 
 #: snippet/models.py:53
-msgid "github profile"
-msgstr "پروفایل گیت هاب"
+msgid "Support Side"
+msgstr "واحد پشتیبانی"
 
 #: snippet/models.py:54
-msgid "linkedin profile"
-msgstr "پروفایل لینکدین"
+msgid "Github Profile"
+msgstr "پروفایل گیت هاب"
 
 #: snippet/models.py:55
-msgid "twitter profile"
-msgstr "پروفایل توییتر"
+msgid "Linkedin Profile"
+msgstr "پروفایل لینکدین"
 
 #: snippet/models.py:56
-msgid "gmail address"
+msgid "Twitter Profile"
+msgstr "پروفایل توییتر"
+
+#: snippet/models.py:57
+msgid "Gmail Address"
 msgstr "آدرس جیمیل"
