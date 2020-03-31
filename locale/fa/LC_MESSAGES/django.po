@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-31 15:40+0430\n"
+"POT-Creation-Date: 2020-03-31 22:30+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,66 +122,70 @@ msgstr "زرد آبی"
 msgid "pink-blue smooth"
 msgstr "صورتی آبی ملایم"
 
-#: snippet/models.py:21
+#: snippet/models.py:17
+msgid "green-cyan"
+msgstr "سبز فیروزه ای"
+
+#: snippet/models.py:22
 msgid "SID"
 msgstr "شناسه"
 
-#: snippet/models.py:22 snippet/models.py:38
+#: snippet/models.py:23 snippet/models.py:39
 msgid "Title"
 msgstr "عنوان"
 
-#: snippet/models.py:23
+#: snippet/models.py:24
 msgid "Details"
 msgstr "جزئیات"
 
-#: snippet/models.py:24
+#: snippet/models.py:25
 msgid "Script"
 msgstr "اسکریپت"
 
-#: snippet/models.py:28
+#: snippet/models.py:29
 msgid "Programming language"
 msgstr "زبان برنامه نویسی"
 
-#: snippet/models.py:30 snippet/models.py:43
+#: snippet/models.py:31 snippet/models.py:44
 msgid "Submition date"
 msgstr "تاریخ ثبت"
 
-#: snippet/models.py:31
+#: snippet/models.py:32
 msgid "URL Address"
 msgstr "آدرس"
 
-#: snippet/models.py:39
+#: snippet/models.py:40
 msgid "Content"
 msgstr "محتوا"
 
-#: snippet/models.py:41
+#: snippet/models.py:42
 msgid "Style"
 msgstr "نگارش"
 
-#: snippet/models.py:49
+#: snippet/models.py:50
 msgid "name"
 msgstr "نام و نام خانوادگی"
 
-#: snippet/models.py:50
+#: snippet/models.py:51
 msgid "position"
 msgstr "مسئولیت"
 
-#: snippet/models.py:51
+#: snippet/models.py:52
 msgid "passion"
 msgstr "اشتیاق"
 
-#: snippet/models.py:52
+#: snippet/models.py:53
 msgid "github profile"
 msgstr "پروفایل گیت هاب"
 
-#: snippet/models.py:53
+#: snippet/models.py:54
 msgid "linkedin profile"
 msgstr "پروفایل لینکدین"
 
-#: snippet/models.py:54
+#: snippet/models.py:55
 msgid "twitter profile"
 msgstr "پروفایل توییتر"
 
-#: snippet/models.py:55
+#: snippet/models.py:56
 msgid "gmail address"
 msgstr "آدرس جیمیل"
