@@ -1,6 +1,6 @@
 from rest_framework import generics
-from snippet.models import Snippet
-from .serializers import SnippetSerializer
+from snippet.models import Snippet, Teammate
+from .serializers import SnippetSerializer, TeammateSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from snippet.tasks import calendar, sid_generator
@@ -26,3 +26,8 @@ class AddSnippet(generics.CreateAPIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class TeamList(generics.ListAPIView):
+    queryset = Teammate.objects.all()
+    serializer_class = TeammateSerializer
