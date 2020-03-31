@@ -20,11 +20,11 @@ main h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    transition: top 0.5s ease;
+  transition: top 0.5s ease;
 }
 
 .navbar-hide {
-    top: -72px;
+  top: -72px;
 }
 
 h1 {
@@ -131,4 +131,8 @@ footer .context {
 
 .suggest4 {
   border-image-source: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.suggest5 {
+  border-image-source: linear-gradient(148deg, rgba(0, 251, 255, 1) 0%, rgba(0, 255, 49, 1) 100%);
 }
