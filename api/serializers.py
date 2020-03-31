@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from snippet.models import Snippet
+from snippet.models import Snippet, Teammate
 
 
 class SnippetSerializer(serializers.ModelSerializer):
@@ -7,3 +7,10 @@ class SnippetSerializer(serializers.ModelSerializer):
             model = Snippet
             fields = ('SID', 'title', 'detail',
                       'script', 'language', 'pub_date', 'link',)
+
+
+class TeammateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Teammate
+        fields = ('name', 'position', 'passion', 'github', 'linkedin',
+                  'twitter', 'gmail')
