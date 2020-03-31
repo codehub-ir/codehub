@@ -109,6 +109,10 @@ footer .context {
   text-decoration: none;
 }
 
+.card-footer {
+  background-color: white;
+}
+
 .suggest {
   padding: 20px 20px 0px 20px;
   border: solid thin;
