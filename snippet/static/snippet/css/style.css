@@ -19,8 +19,12 @@ main h1, h2, h3, h4, h5, h6 {
   color: #4b4b4b;
 }
 
-main {
-  margin-top: 80px;
+.navbar {
+    transition: top 0.5s ease;
+}
+
+.navbar-hide {
+    top: -72px;
 }
 
 h1 {
