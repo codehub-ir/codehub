@@ -1,0 +1,62 @@
+{% extends 'snippet/base.html' %}
+{% load static %}
+
+{% block meta %}
+<!-- Primary Meta Tags -->
+<meta name="description" content="دوستانی که در ساخت کد هاب همیاری کردن و کد هاب رو به اینجا رسوندن.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{% url 'team' %}">
+<meta property="og:title" content="کد هاب • تیم کد هاب">
+<meta property="og:description" content="دوستانی که در ساخت کد هاب همیاری کردن و کد هاب رو به اینجا رسوندن.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{% url 'team' %}">
+<meta property="twitter:title" content="کد هاب • تیم کد هاب">
+<meta property="twitter:description" content="دوستانی که در ساخت کد هاب همیاری کردن و کد هاب رو به اینجا رسوندن.">
+{% endblock %}
+
+{% block title %}
+تیم کد هاب
+{% endblock %}
+
+{% block team %}
+active
+{% endblock %}
+
+{% block content %}
+<h2>تیم کد هاب متشکل شده از..</h2><br>
+
+<div class="row card-deck">
+
+  {% for teammate in teammates %}
+  <div class="card col-sm-6 shadow-sm border" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{teammate.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{teammate.position}}</h6>
+      <p class="card-text">{{teammate.passion}}</p>
+      {% if teammate.github %}
+      <a href="{{teammate.github}}" target="_blank" class="btn btn-outline-dark fa fa-github"></a>
+      {% endif %}
+      {% if teammate.linkedin %}
+      <a href="{{teammate.linkedin}}" target="_blank" class="btn btn-outline-primary fa fa-linkedin"></a>
+      {% endif %}
+      {% if teammate.gmail %}
+      <a href="mailto:{{teammate.gmail}}" target="_blank" class="btn btn-outline-danger fa fa-google"></a>
+      {% endif %}
+      {% if teammate.twitter %}
+      <a href="{{teammate.twitter}}" class="btn btn-outline-info fa fa-twitter"></a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="part">
+  <h3>شما هم میتونید هم تیمی ما باشید!</h3>
+  <p>کافیه به صفحه <a href="https://github.com/lnxpy/codehub" target="_blank">گیت هاب</a> کد هاب مراجعه کنید و خلاقیتتون رو نشون بدین. مطمئن باشین خبرش به دستمون میرسه.</p>
+</div>
+
+{% endblock %}
