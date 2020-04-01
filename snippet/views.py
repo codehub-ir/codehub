@@ -26,7 +26,7 @@ def new(request):
             post.script = request.POST.get('script')
             post.language = request.POST.get('language')
             post.pub_date = calendar()
-            post.link = settings.WEBSITE_ADDR + post.SID
+            post.link = settings.WEBSITE_ADDR + 'snippet/' + post.SID
             post.save()
             return redirect('show', id=post.SID)
     else:
