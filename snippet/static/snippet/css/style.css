@@ -73,6 +73,10 @@ h6{
   padding: 15px 0px 0px 15px;
 }
 
+.code-block span{
+  unicode-bidi: embed;
+}
+
 .part {
   margin-top: 30px;
   margin-bottom: 30px;
