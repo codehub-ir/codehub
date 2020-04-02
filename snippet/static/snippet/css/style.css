@@ -19,29 +19,41 @@ main h1, h2, h3, h4, h5, h6 {
   color: #4b4b4b;
 }
 
+main p {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4{
+  font-size: 22px;
+}
+
+h5{
+  font-size: 18px;
+}
+
+h6{
+  font-size: 15px;
+}
+
 .navbar {
   transition: top 0.5s ease;
 }
 
 .navbar-hide {
   top: -72px;
-}
-
-h1 {
-  font-size: 35px;
-}
-
-h2 {
-  font-size: 27px;
-}
-
-h3 {
-  font-size: 21px;
-}
-
-main p {
-  font-size: 18px;
-  margin-right: 10px;
 }
 
 .line {
