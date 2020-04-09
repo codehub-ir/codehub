@@ -23,6 +23,7 @@ class Snippet(models.Model):
     title = models.CharField(max_length=100, verbose_name=_('Title'))
     detail = models.TextField(blank=True, verbose_name=_('Details'))
     script = models.TextField(verbose_name=_('Script'))
+    error = models.TextField(verbose_name=_('Error'), blank=True)
     language = models.CharField(choices=LANGUAGE_CHOICES,
                                 default='python',
                                 max_length=100,
@@ -46,11 +47,13 @@ class Suggest(models.Model):
     def __str__(self):
         return self.title
 
+
 class Teammate(models.Model):
     name = models.CharField(max_length=25, verbose_name=_('Name'))
     position = models.CharField(max_length=50, verbose_name=_('Position'))
     passion = models.CharField(max_length=100, verbose_name=_('Passion'))
-    support_side = models.CharField(max_length=50, verbose_name=_('Support Side'))
+    support_side = models.CharField(
+        max_length=50, verbose_name=_('Support Side'))
     github = models.URLField(blank=True, verbose_name=_('Github Profile'))
     linkedin = models.URLField(blank=True, verbose_name=_('Linkedin Profile'))
     twitter = models.URLField(blank=True, verbose_name=_('Twitter Profile'))
