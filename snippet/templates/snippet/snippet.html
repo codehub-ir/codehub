@@ -30,11 +30,20 @@
 <p>{{snippet.detail}}</p>
 {% endif %}
 
-<div class="code-block">
+<div class="code-block rounded">
   {% pygmentify %}
   <pre class="{{snippet.language}}">{{snippet.script}}</pre>
   {% endpygmentify %}
 </div>
+
+{% if snippet.error %}
+<div class="separator"><span>خطا</span></div>
+<div class="code-block rounded">
+  {% pygmentify %}
+  <pre class="{{snippet.language}}">{{snippet.error}}</pre>
+  {% endpygmentify %}
+</div>
+{% endif %}
 
 <p class="date">{{snippet.pub_date}}</p>
 {% endblock %}

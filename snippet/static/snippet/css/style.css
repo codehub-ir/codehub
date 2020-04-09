@@ -71,10 +71,15 @@ h6{
   width: auto;
   height: auto;
   padding: 15px 0px 0px 15px;
+  margin: 12px 0;
 }
 
 .code-block span{
   unicode-bidi: embed;
+}
+
+.block-error{
+  border-color: red;
 }
 
 .part {
@@ -84,6 +89,26 @@ h6{
 
 .fa-heart {
   color: red;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator span{
+  margin: 0px 15px;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #DFE0E1;
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
 }
 
 /*--------------------------------------------------------------
