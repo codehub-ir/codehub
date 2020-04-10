@@ -166,8 +166,8 @@ PERSIAN_NUM = {
     9: _('9')
 }
 
-WEBSITE_ADDR = 'http://%s/'%ALLOWED_HOSTS[0]
+WEBSITE_ADDR = 'http://%s/' % ALLOWED_HOSTS[0]
 
 LOCALE_PATHS = [
-    os.path.join(BASE_DIR,'locale'),
+    os.path.join(BASE_DIR, 'locale'),
 ]
