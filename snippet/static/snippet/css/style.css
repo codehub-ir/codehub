@@ -63,6 +63,10 @@ h6{
   margin-bottom: 20px;
 }
 
+.form-group #req {
+  color:red;
+}
+
 .code-block {
   border: solid thin #bdbdbd;
   direction: ltr;

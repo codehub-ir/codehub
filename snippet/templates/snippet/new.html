@@ -30,17 +30,17 @@ active
 {% block content %}
 <form method="POST" class="post-form" spellcheck="false">{% csrf_token %}
   <div class="form-group">
-    <label for="title">عنوان</label>
+    <label for="title">عنوان <span id="req">*</span></label>
     <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
   </div>
 
   <div class="form-group">
-    <label for="detail">توضیحات بیشتر(اختیاری)</label>
+    <label for="detail">توضیحات بیشتر</label>
     <textarea class="form-control" rows="8" name="detail" placeholder="Details"></textarea>
   </div>
 
   <div class="form-group">
-    <label for="script">اسکریپت</label>
+    <label for="script">اسکریپت <span id="req">*</span></label>
     <code>
     <textarea class="form-control" rows="8" name="script" placeholder="Script"></textarea>
     </code>
@@ -54,8 +54,8 @@ active
   </div>
 
   <div class="form-group">
-    <label for="language">زبان برنامه نویسی</label>
-    {{ form.language|add_class:"custom-select"}}
+    <label for="language">زبان برنامه نویسی <span id="req">*</span></label>
+    {{ form.language|add_class:"custom-select" }}
   </div>
   <br>
   <div class="form-group">
