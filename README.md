@@ -16,6 +16,8 @@
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
 
+**ATTENTION: API Addresses will be readdressed soon, so be sure you will replace these parallel links.**
+
 ## CodeHub
 CodeHub is a platform for archiving the errors, bugs, and scripts you intend to share with others. You may have seen the other samples anywhere but this platform is completely Persian, free and also accessible to all friends.
 Not only can you share your programming problems in CodeHub, but you can also easily write handy scripts and modules and send them to your friends on social networks.
