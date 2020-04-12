@@ -12,6 +12,7 @@ Django==3.0.4
 django-ckeditor==5.9.0
 django-js-asset==1.2.2
 django-pygmentify==0.3.7
+django-rest-auth==0.9.5
 django-widget-tweaks==1.4.8
 djangorestframework==3.11.0
 idna==2.9
