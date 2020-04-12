@@ -16,8 +16,11 @@ urlpatterns = [
 
     # API - ADMIN
     path('api/v1/admin/snippet/', views.AdminSnippetView.as_view()),
+    path('api/v1/admin/snippet/<str:SID>/', views.AdminSnippetMod.as_view()),
     path('api/v1/admin/suggest/', views.AdminSuggestAdd.as_view()),
+    path('api/v1/admin/suggest/<int:pk>', views.AdminSuggestMod.as_view()),
     path('api/v1/admin/team/', views.AdminTeamAdd.as_view()),
+    path('api/v1/admin/team/<int:pk>', views.AdminTeamMod.as_view()),
 
     # API - Auth
     path('api-auth/', include('rest_framework.urls')),
