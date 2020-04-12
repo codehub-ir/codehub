@@ -91,13 +91,32 @@ class AdminSnippetView(generics.ListAPIView):
     serializer_class = SnippetSerializer
 
 
+class AdminSnippetMod(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAdminOrDenied,)
+    queryset = Snippet.objects.all()
+    serializer_class = SnippetSerializer
+    lookup_field = 'SID'
+
+
 class AdminSuggestAdd(generics.ListCreateAPIView):
     permission_classes = (IsAdminOrDenied,)
     queryset = Suggest.objects.all()
     serializer_class = SuggestSerializer
 
 
+class AdminSuggestMod(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAdminOrDenied,)
+    queryset = Suggest.objects.all()
+    serializer_class = SuggestSerializer
+
+
 class AdminTeamAdd(generics.ListCreateAPIView):
+    permission_classes = (IsAdminOrDenied,)
+    queryset = Teammate.objects.all()
+    serializer_class = TeamSerializer
+
+
+class AdminTeamMod(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (IsAdminOrDenied,)
     queryset = Teammate.objects.all()
     serializer_class = TeamSerializer
