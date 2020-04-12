@@ -25,5 +25,5 @@ class SuggestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Suggest
         fields = (
-            'title', 'content', 'theme',
+            'id', 'title', 'content', 'theme',
         )
