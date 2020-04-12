@@ -16,8 +16,6 @@
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
 
-**ATTENTION: API Addresses will be readdressed soon, so be sure you will replace these parallel links.**
-
 ## CodeHub
 CodeHub is a platform for archiving the errors, bugs, and scripts you intend to share with others. You may have seen the other samples anywhere but this platform is completely Persian, free and also accessible to all friends.
 Not only can you share your programming problems in CodeHub, but you can also easily write handy scripts and modules and send them to your friends on social networks.
@@ -103,6 +101,24 @@ configs = {
 
 snippet = PushSnippet(**configs).push()
 print(snippet)
+```
+
+### Admin API
+You may need to transfer data from the client side to the server using APIs, so there is no concerns. 
+#### 1. Authentication
+CodeHub is a Token-based website that allows admins to transfer data using Application/JSON style. After the migration you can access to `../api/vX/admin/login` or `../api/vX/admin/logout` to both logging in or logging out from the website.
+
+#### 3. See Snippets
+Use `../api/vX/admin/snippet` to show all saved snippets from all users. You can also use `../api/vX/admin/snippet/<SID>` for CRUD access.
+
+#### 4. See Teammates
+To see teammates and add how much you want, you can locate in `../api/vX/admin/team`. Use `../api/vX/admin/team/<ID>` to modify any teammate you want.
+
+#### 5. See Suggestions
+To change, create, and show any suggestion use the following addresses. (You have to be logged in as the superuser if you want the CRUD access)
+```
+../api/vX/admin/suggest/
+../api/vX/admin/suggest/<ID>
 ```
 
 ### Find More
