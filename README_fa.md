@@ -6,12 +6,6 @@
   <br>
   <span>سرویس پیست بین پارسی</span>
   <br>
-  <br>
-  <a href="#"><img src="https://img.shields.io/github/issues/lnxpy/codehub?color=red&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/stars/lnxpy/codehub?color=green&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/forks/lnxpy/codehub?color=yellow&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/license/lnxpy/codehub?color=blue&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <br>
   <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> |
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
