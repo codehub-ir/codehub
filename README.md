@@ -6,12 +6,6 @@
   <br>
   <span>Persian Pastebin Service</span>
   <br>
-  <br>
-  <a href="#"><img src="https://img.shields.io/github/issues/CodeHub-Contributors/codehub?color=red&style=flat-square" alt="Issues" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/stars/CodeHub-Contributors/codehub?color=green&style=flat-square" alt="Stars" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/forks/CodeHub-Contributors/codehub?color=yellow&style=flat-square" alt="Forks" style="max-width:100%;"></a>
-    <a href="#"><img src="https://img.shields.io/github/license/CodeHub-Contributors/codehub?color=purple&style=flat-square" alt="License" style="max-width:100%;"></a>
-  <br>
   <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> ◆
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
