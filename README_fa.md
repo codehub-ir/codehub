@@ -6,7 +6,7 @@
   <br>
   <span>سرویس پیست بین پارسی</span>
   <br>
-  <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> |
+  <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> ◆
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
 
