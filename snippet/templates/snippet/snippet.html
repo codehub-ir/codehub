@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block content %}
-<h3 id="myInput">{{snippet.title}}</h3>
+<h3>{{snippet.title}}</h3>
 <hr>
 {% if snippet.detail %}
 <p>{{snippet.detail | linebreaks}}</p>
@@ -39,12 +39,10 @@
 {% if snippet.error %}
 <div class="separator"><span>خطا</span></div>
 <div class="code-block rounded">
-  {% pygmentify %}
   <pre class="{{snippet.language}}">{{snippet.error}}</pre>
-  {% endpygmentify %}
 </div>
 {% endif %}
 
 <p class="date"><span class="date">{{snippet.pub_date}}</span> -- کد خطا <span class="right-side-header snippetid"
-    title="Copy Text" id="text" onclick="copyElementText(this.id)">{{snippet.SID}}</span></p>
+    title="کپی" id="text" onclick="copyElementText(this.id)">{{snippet.SID}}</span></p>
 {% endblock %}
