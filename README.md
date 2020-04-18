@@ -6,12 +6,6 @@
   <br>
   <span>Persian Pastebin Service</span>
   <br>
-  <br>
-  <a href="#"><img src="https://img.shields.io/github/issues/lnxpy/codehub?color=red&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/stars/lnxpy/codehub?color=green&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <a href="#"><img src="https://img.shields.io/github/forks/lnxpy/codehub?color=yellow&style=flat-square" alt="Version" style="max-width:100%;"></a>
-    <a href="#"><img src="https://img.shields.io/github/license/lnxpy/codehub?color=purple&style=flat-square" alt="Version" style="max-width:100%;"></a>
-  <br>
   <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> ◆
   <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
   </p>
@@ -104,7 +98,7 @@ print(snippet)
 ```
 
 ### Admin API
-You may need to transfer data from the client side to the server using APIs, so there is no concerns. 
+You may need to transfer data from the client side to the server using APIs, so there are no concerns. 
 #### 1. Authentication
 CodeHub is a Token-based website that allows admins to transfer data using Application/JSON style. After the migration you can access to `../api/vX/admin/login` or `../api/vX/admin/logout` to both logging in or logging out from the website.
 
