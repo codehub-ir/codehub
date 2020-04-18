@@ -4,30 +4,30 @@
 
 {% block meta %}
 <!-- Primary Meta Tags -->
-<meta name="description" content="اگه می تونید مشکل رو حل کنید و دوستتون رو راهنمایی کنید وارد لینک شید.">
+<meta name="description" content="{{snippet.detail}}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{% url 'show' snippet.SID %}">
-<meta property="og:title" content="کد هاب • کد {{snippet.SID}}">
-<meta property="og:description" content="اگه می تونید مشکل رو حل کنید و دوستتون رو راهنمایی کنید وارد لینک شید.">
+<meta property="og:title" content="کد هاب • {{snippet.title}}">
+<meta property="og:description" content="{{snippet.detail}}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{% url 'show' snippet.SID %}">
-<meta property="twitter:title" content="کد هاب • کد {{snippet.SID}}">
-<meta property="twitter:description" content="اگه می تونید مشکل رو حل کنید و دوستتون رو راهنمایی کنید وارد لینک شید.">
+<meta property="twitter:title" content="کد هاب • {{snippet.title}}">
+<meta property="twitter:description" content="{{snippet.detail}}">
 {% endblock %}
 
 {% block title %}
-کد {{snippet.SID}}
+{{snippet.title}}
 {% endblock %}
 
 {% block content %}
-<h2 id="myInput">{{snippet.title}}</h2>
+<h3 id="myInput">{{snippet.title}}</h3>
 <hr>
 {% if snippet.detail %}
-<p>{{snippet.detail}}</p>
+<p>{{snippet.detail | linebreaks}}</p>
 {% endif %}
 
 <div class="code-block rounded">
@@ -45,5 +45,6 @@
 </div>
 {% endif %}
 
-<p class="date">{{snippet.pub_date}}</p>
+<p class="date"><span class="date">{{snippet.pub_date}}</span> -- کد خطا <span class="right-side-header snippetid"
+    title="Copy Text" id="text" onclick="copyElementText(this.id)">{{snippet.SID}}</span></p>
 {% endblock %}
