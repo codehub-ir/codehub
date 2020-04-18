@@ -98,7 +98,7 @@ print(snippet)
 ```
 
 ### Admin API
-You may need to transfer data from the client side to the server using APIs, so there is no concerns. 
+You may need to transfer data from the client side to the server using APIs, so there are no concerns. 
 #### 1. Authentication
 CodeHub is a Token-based website that allows admins to transfer data using Application/JSON style. After the migration you can access to `../api/vX/admin/login` or `../api/vX/admin/logout` to both logging in or logging out from the website.
 
