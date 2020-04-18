@@ -158,6 +158,15 @@ footer .context {
   background-color: white;
 }
 
+.snippetid{
+  color:rgb(77, 77, 77);
+  cursor: pointer;
+}
+
+.snippetid:hover{
+  text-decoration: underline;
+}
+
 .suggest {
   padding: 20px 20px 0px 20px;
   border: solid thin;
