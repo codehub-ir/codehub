@@ -20,5 +20,5 @@ function copyElementText(id) {
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
-    window.alert('Snippet link copied to clipboard!')
+    window.alert('آدرس اسنیپت کپی شد!')
 }
