@@ -161,10 +161,12 @@ footer .context {
 .snippetid{
   color:rgb(77, 77, 77);
   cursor: pointer;
+  transition: color .5s;
 }
 
 .snippetid:hover{
   text-decoration: underline;
+  color: #242424;
 }
 
 .suggest {

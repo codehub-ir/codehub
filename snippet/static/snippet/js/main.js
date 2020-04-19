@@ -20,5 +20,10 @@ function copyElementText(id) {
     elem.select();
     document.execCommand("copy");
     document.body.removeChild(elem);
-    window.alert('آدرس اسنیپت کپی شد!')
 }
+
+$(document).ready(function () {
+    $("#text").click(function () {
+        $('.toast').toast('show');
+    });
+});
