@@ -28,32 +28,36 @@ active
 {% endblock %}
 
 {% block content %}
-<h2>تیم باحال کد هاب</h2>
-<p>کد هاب باعث شد یکی از بهترین تیم های برنامه نویسی تشکیل شه. تیمی که نتیجه زحمات اعضاش کد هابی هست که امروز می بینید. </p><br>
+<h3>تیم باحال کد هاب</h3>
+<p>کد هاب باعث شد یکی از بهترین تیم های برنامه نویسی تشکیل شه. تیمی که نتیجه زحمات اعضاش کد هابی هست که امروز می بینید.
+</p><br>
 
-<div class="row card-deck">
-
+<div class="row">
   {% for teammate in teammates %}
-  <div class="card col-sm-6 shadow-sm border" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{teammate.name}}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{teammate.position}}</h6>
-      <p class="card-text">{{teammate.passion}}</p>
-      {% if teammate.github %}
-      <a href="{{teammate.github}}" target="_blank" class="btn btn-outline-dark fa fa-github"></a>
-      {% endif %}
-      {% if teammate.linkedin %}
-      <a href="{{teammate.linkedin}}" target="_blank" class="btn btn-outline-primary fa fa-linkedin"></a>
-      {% endif %}
-      {% if teammate.gmail %}
-      <a href="mailto:{{teammate.gmail}}" target="_blank" class="btn btn-outline-danger fa fa-google"></a>
-      {% endif %}
-      {% if teammate.twitter %}
-      <a href="{{teammate.twitter}}" class="btn btn-outline-info fa fa-twitter"></a>
-      {% endif %}
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{teammate.support_side}}</small>
+  <div class="col-md-6">
+    <div class="card mdb-color lighten-2 z-depth-2" style="margin-bottom: 20px;">
+      <div class="card-body">
+        <h5 class="card-title">{{teammate.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{teammate.position}}</h6>
+        <p class="card-text">{{teammate.passion}}</p>
+
+        {% if teammate.github %}
+        <a href="{{teammate.github}}" target="_blank" class="btn btn-outline-dark fa fa-github"></a>
+        {% endif %}
+        {% if teammate.linkedin %}
+        <a href="{{teammate.linkedin}}" target="_blank" class="btn btn-outline-primary fa fa-linkedin"></a>
+        {% endif %}
+        {% if teammate.gmail %}
+        <a href="mailto:{{teammate.gmail}}" target="_blank" class="btn btn-outline-danger fa fa-google"></a>
+        {% endif %}
+        {% if teammate.twitter %}
+        <a href="{{teammate.twitter}}" class="btn btn-outline-info fa fa-twitter"></a>
+        {% endif %}
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">{{teammate.support_side}}</small>
+      </div>
     </div>
   </div>
   {% endfor %}
@@ -61,7 +65,8 @@ active
 
 <div class="part">
   <h3>شما هم میتونید هم تیمی ما باشید!</h3>
-  <p>کافیه به صفحه <a href="https://github.com/lnxpy/codehub" target="_blank">گیت هاب</a> کد هاب مراجعه کنید و خلاقیتتون رو نشون بدین. مطمئن باشین خبرش به دستمون میرسه.</p>
+  <p>کافیه به صفحه <a href="https://github.com/lnxpy/codehub" target="_blank">گیت هاب</a> کد هاب مراجعه کنید و خلاقیتتون
+    رو نشون بدین. مطمئن باشین خبرش به دستمون میرسه.</p>
 </div>
 
 {% endblock %}
