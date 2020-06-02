@@ -96,6 +96,7 @@ configs = {
 snippet = PushSnippet(**configs).push()
 print(snippet)
 ```
+For more information click [here](https://github.com/CodeHub-Contributors/CodeHub-cli).
 
 ### Admin API
 You may need to transfer data from the client side to the server using APIs, so there are no concerns. 
