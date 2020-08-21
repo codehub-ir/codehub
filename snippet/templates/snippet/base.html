@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="{% static 'snippet/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'snippet/css/vs.css' %}">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <script src="{% static 'snippet/js/jquery-3.3.1.slim.min.js' %}"></script>
   <script src="{% static 'snippet/js/popper.min.js' %}"></script>
@@ -25,11 +25,12 @@
 
 <body>
 
-  <nav  class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
     <a class="navbar-brand" href="/">
       <img src="{% static 'snippet/img/logo.png' %}" width="45" height="45" class="d-inline-block align-top" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
@@ -46,9 +47,14 @@
         <li class="nav-item {% block team %}{% endblock %}">
           <a class="nav-link" href="{% url 'team' %}">تیم کد هاب</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank"
+            href="https://github.com/CodeHub-Contributors/CodeHub-Android/blob/master/Objects/codehub_android.apk">دانلود
+            اپلیکیشن اندروید <span class="badge badge-pill badge-primary">جدید</span></a>
+        </li>
       </ul>
       <span class="navbar-text">
-          کد هاب در <a href="https://github.com/lnxpy/codehub" target="_blank"><span class="fa fa-github-alt"></span></a>
+        کد هاب در <a href="https://github.com/lnxpy/codehub" target="_blank"><span class="fa fa-github-alt"></span></a>
       </span>
     </div>
   </nav>
