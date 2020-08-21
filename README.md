@@ -80,7 +80,7 @@ RETURNED DATA:
 
 Tip: `vX` means the API version you use. The first version (`v1`) is avalable now.
 
-#### 3. Optionals (Acording to [CodeHub-cli](https://github.com/CodeHub-Contributors/CodeHub-cli))
+#### 3. Optionals (According to [CodeHub-CLI](https://github.com/CodeHub-Contributors/CodeHub-cli))
 There are some fields you are able to leave them empty. `detail`and `error` fields are the optional parameters you may not want to fill them up, so you use the exact keywords to give other parameters the values you want.
 ```python
 from components import GetSnippet, PushSnippet, Language
@@ -96,6 +96,7 @@ configs = {
 snippet = PushSnippet(**configs).push()
 print(snippet)
 ```
+For more information click [here](https://github.com/CodeHub-Contributors/CodeHub-cli).
 
 ### Admin API
 You may need to transfer data from the client side to the server using APIs, so there are no concerns. 
