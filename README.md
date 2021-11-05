@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://github.com/lnxpy/codehub/blob/master/git_components/gitbanner.png" width="550px">
+  <img src="git_components/gitbanner.png" width="550px">
   <br>
   <br>
   <b>CodeHub</b>
   <br>
   <span>Persian Pastebin Service</span>
   <br>
-  <a href="https://github.com/lnxpy/codehub/blob/master/README_fa.md">پارسی</a> ◆
-  <a href="https://github.com/lnxpy/codehub/blob/master/README.md">English</a>
+  <a href="README_fa.md">پارسی</a> ◆
+  <a href="README.md">English</a>
   </p>
 
 ## CodeHub
