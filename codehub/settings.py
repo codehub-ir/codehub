@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    #3rd party pkgs
-    'django_hashids',
-    
     #apps
     'account',
     'main',
