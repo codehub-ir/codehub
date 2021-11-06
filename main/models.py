@@ -1,21 +1,27 @@
 from django.db import models
-from django_hashids import HashidsField
+from .constants import LANGUAGES
+from .utils import generateSID
 
 
 class Snippet(models.Model):
-    # all snippets and code pieces
-    
-    LANGUAGES = (
-        ('', ''),
-        ('', ''),
-    )
-    id = HashidsField(real_field_name='Snippet ID', min_length=10, alphabet=''.join([chr(_) for _ in range(65, 123)]))
-    
-    '''
-    title = models.CharField(max)
-    description = models.TextField
-    body = models.TextField
-    language = 
-    created_on = 
-    views = 
-    '''
+
+    id = models.CharField('ID', max_length=11,
+                          primary_key=True, editable=False)
+
+    title = models.CharField(max_length=50, default='')
+    description = models.TextField(default='')
+    body = models.TextField('Script', default='')
+    lang = models.CharField('Language', max_length=250,
+                            choices=LANGUAGES, default='')
+    created_on = models.DateField(auto_now=True, editable=False)
+
+    # TODO: Adding view counter using django-hitcount
+
+    class Meta:
+        pass
+
+    def __str__(self): return self.title
+
+    def save(self, *args, **kwargs):
+        self.id = generateSID()
+        super().save(*args, **kwargs)
