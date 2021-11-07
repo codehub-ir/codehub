@@ -14,15 +14,20 @@ class Snippet(models.Model):
     )
     title = models.CharField(
         max_length=50,
+        default='',
     )
-    description = models.TextField()
+    description = models.TextField(
+        null=True,
+    )
     body = models.TextField(
         verbose_name='Script',
+        null=True,
     )
     lang = models.CharField(
         verbose_name='Language',
         max_length=250,
         choices=LANGUAGES,
+        null=True,
     )
     created_on = models.DateField(
         auto_now=True,
