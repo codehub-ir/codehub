@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from django.template.defaultfilters import slugify
+from django_jalali.db import models as jmodels
 
 from .constants import LANGUAGES
 from .utils import generateSID
@@ -31,7 +33,7 @@ class Snippet(models.Model):
         choices=LANGUAGES,
         null=True,
     )
-    created_on = models.DateField(
+    created_on = jmodels.jDateField(
         auto_now=True,
         editable=False,
     )
@@ -51,13 +53,75 @@ class Snippet(models.Model):
         super().save(*args, **kwargs)
 
 
+class Tag(models.Model):
+    name = models.CharField(
+        max_length=50,
+    )
+    description = models.CharField(
+        max_length=150,
+    )
+    created_on = jmodels.jDateField(
+        auto_now=True,
+        editable=False,
+    )
+
+    def __str__(self): return self.name
+
+
 class Ticket(models.Model):
-    pass
+    title = models.CharField(
+        max_length=150,
+    )
+    description = models.TextField()
+    tags = models.ManyToManyField(
+        Tag,
+        null=True,
+    )
+    slug = models.SlugField(
+        editable=False,
+    )
+    is_valid = models.BooleanField(
+        default=False,
+    )
+    created_on = jmodels.jDateField(
+        auto_now=True,
+        editable=False,
+    )
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        editable=False,
+        null=True,
+    )
+
+    def __str__(self): return self.title
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
-    pass
+    body = models.CharField(
+        max_length=250,
+    )
+    ticket = models.ForeignKey(
+        Ticket,
+        on_delete=models.CASCADE,
+    )
+    is_valid = models.BooleanField(
+        default=False,
+    )
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        editable=False,
+        null=True,
+    )
+    created_on = jmodels.jDateField(
+        auto_now=True,
+        editable=False,
+    )
 
-
-class Tag(models.Model):
-    pass
+    def __str__(self):
+        return f'{self.created_by} on {self.ticket}'
