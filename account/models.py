@@ -7,9 +7,7 @@ class User(AbstractUser):
     display_name = models.CharField(
         max_length=50,
     )
-    email = models.EmailField(
-        blank=True,
-    )
+    email = models.EmailField()
     twitter = models.URLField(
         blank=True,
     )
