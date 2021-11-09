@@ -1,7 +1,9 @@
 from django.db import models
 from django.urls import reverse
+
 from .constants import LANGUAGES
 from .utils import generateSID
+from account.models import User
 
 
 class Snippet(models.Model):
@@ -47,3 +49,15 @@ class Snippet(models.Model):
     def save(self, *args, **kwargs):
         self.id = generateSID()
         super().save(*args, **kwargs)
+
+
+class Ticket(models.Model):
+    pass
+
+
+class Comment(models.Model):
+    pass
+
+
+class Tag(models.Model):
+    pass
