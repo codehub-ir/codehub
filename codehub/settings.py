@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # apps
     'main',
     'account',
+
+    # 3rd party pkgs
+    'django_jalali',
 ]
 
 MIDDLEWARE = [
