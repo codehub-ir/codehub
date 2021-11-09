@@ -75,7 +75,6 @@ class Ticket(models.Model):
     description = models.TextField()
     tags = models.ManyToManyField(
         Tag,
-        null=True,
     )
     slug = models.SlugField(
         editable=False,
