@@ -93,6 +93,8 @@ class Ticket(models.Model):
         null=True,
     )
 
+    # TODO: Adding a view counter using django-hitcount pkg
+
     def __str__(self): return self.title
 
     def save(self, *args, **kwargs):
