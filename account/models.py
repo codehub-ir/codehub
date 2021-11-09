@@ -10,10 +10,10 @@ class User(AbstractUser):
     email = models.EmailField(
         blank=True,
     )
-    twitter = models.EmailField(
+    twitter = models.URLField(
         blank=True,
     )
-    github = models.EmailField(
+    github = models.URLField(
         blank=True,
     )
 
