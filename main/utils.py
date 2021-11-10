@@ -4,14 +4,12 @@ used as a data generator in the models, views, and etc.
 '''
 
 
-def generateSID() -> str:
+def generateSID(nb=5) -> str:
     from secrets import token_hex
     from .models import Snippet
 
-    bytenums = 5
-
-    sid = token_hex(nbytes=bytenums)
+    sid = token_hex(nbytes=nb)
     while Snippet.objects.filter(id=sid).exists():
-        sid = token_hex(nbytes=bytenums)
+        sid = token_hex(nbytes=nb)
 
     return sid
