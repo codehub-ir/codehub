@@ -10,6 +10,10 @@
   <a href="README.md">English</a>
   </p>
 
+> :heavy_check_mark:: This project is being developed externally on [lnxpy/codehub](https://github.com/lnxpy/codehub), once all tests are passed and the project stabilized, all changes will be pushed to the current repository.
+
+> :hibiscus:: Special thanks to those who tested the project and give me responses and ideas.
+
 ## CodeHub
 CodeHub is a platform for archiving the errors, bugs, and scripts you intend to share with others. You may have seen the other samples anywhere but this platform is completely Persian, free and also accessible to all friends.
 Not only you can share your programming problems in CodeHub, but also you can easily write handy scripts and modules and send them to your friends on social networks.
