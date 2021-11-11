@@ -83,7 +83,7 @@ class TicketTestCase(TestCase):
 
         '''
         Since the Ticket.tags is a ManyToMany field,
-        It needs to get saved eventualy right after
+        It needs to get saved immediately right after
         It created.
         '''
         _tag = Tag(**self.tag_sample)
@@ -93,8 +93,8 @@ class TicketTestCase(TestCase):
         self.ticket.save()
 
         '''
-        Then we add those pre-build Tab obj(s) to out
-        Ticket object.
+        Then we add those pre-built Tag objects to
+        the Ticket object tags field. -> Ticket.tags
         '''
         self.ticket.tags.set([_tag])
         self.ticket.created_by = _user
