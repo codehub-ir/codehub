@@ -1,10 +1,10 @@
 from django.db.models import fields
 from django.test import TestCase
 
-from main.models import Snippet, Tag, Ticket
-from main.constants import LANGUAGES
-from main.utils import generateSID
 from account.models import User
+from main.constants import LANGUAGES
+from main.models import Snippet, Tag, Ticket
+from main.utils import generateSID
 
 
 class SnippetTestCase(TestCase):
