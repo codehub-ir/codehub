@@ -150,5 +150,4 @@ class CommentTestCase(TestCase):
         self.assertEqual(fields, self.comment_sample)
 
     def test_comment_user_authority(self):
-        input()
         self.assertEqual(self.comment.created_by, self.user)
