@@ -3,14 +3,13 @@ from django.test import TestCase
 
 from account.models import User
 from main.constants import LANGUAGES
-from main.models import Snippet, Tag, Ticket
-from main.utils import generateSID
+from main.models import Comment, Snippet, Tag, Ticket
 
 
 class SnippetTestCase(TestCase):
 
     @classmethod
-    def setUpTestData(cls):
+    def setUpTestData(cls) -> None:
         cls.sample = {
             'title': 'simple title',
             'description': 'some description',
@@ -18,7 +17,7 @@ class SnippetTestCase(TestCase):
             'lang': LANGUAGES[0][1],  # ApacheConf
         }
 
-    def setUp(self):
+    def setUp(self) -> None:
         self.snippet = Snippet.objects.create(**self.sample)
 
     def test_if_obj_returns_same_fields(self):
@@ -39,13 +38,13 @@ class SnippetTestCase(TestCase):
 class TagTestCase(TestCase):
 
     @classmethod
-    def setUpTestData(cls):
+    def setUpTestData(cls) -> None:
         cls.sample = {
             'name': 'AngularLA',
             'description': 'a framework built in LA',
         }
 
-    def setUp(self):
+    def setUp(self) -> None:
         self.tag = Tag.objects.create(**self.sample)
 
     def test_if_obj_returns_same_fields(self):
@@ -60,7 +59,7 @@ class TagTestCase(TestCase):
 class TicketTestCase(TestCase):
 
     @classmethod
-    def setUpTestData(cls):
+    def setUpTestData(cls) -> None:
         cls.ticket_sample = {
             'title': 'Ticket Title',
             'description': 'Ticket Description',
@@ -78,7 +77,7 @@ class TicketTestCase(TestCase):
             'description': 'Tag Description',
         }
 
-    def setUp(self):
+    def setUp(self) -> None:
         _user = User.objects.create(**self.user_sample)
 
         '''
@@ -110,3 +109,46 @@ class TicketTestCase(TestCase):
     def test_check_ticket_creator(self):
         self.assertEqual(self.ticket.created_by.username,
                          self.user_sample['username'])
+
+
+class CommentTestCase(TestCase):
+
+    @classmethod
+    def setUpTestData(cls) -> None:
+        cls.ticket_sample = {
+            'title': 'Ticket Title',
+            'description': 'Ticket Description',
+        }
+        cls.user_sample = {
+            'username': 'johndoe',
+            'display_name': 'John Doe',
+            'email': 'john@doe.com',
+            'password': 'testPass123',
+        }
+        cls.comment_sample = {
+            'body': 'Body of the comment',
+        }
+
+    def setUp(self) -> None:
+        self.ticket = Ticket.objects.create(**self.ticket_sample)
+        self.user = User.objects.create(**self.user_sample)
+
+        self.comment_sample['ticket'] = self.ticket
+        self.comment_sample['created_by'] = self.user
+
+        self.comment = Comment.objects.create(
+            **self.comment_sample
+        )
+
+    def test_if_obj_returns_same_fields(self):
+        fields = {
+            'body': self.comment.body,
+            'ticket': self.comment.ticket,
+            'created_by': self.comment.created_by,
+        }
+
+        self.assertEqual(fields, self.comment_sample)
+
+    def test_comment_user_authority(self):
+        input()
+        self.assertEqual(self.comment.created_by, self.user)
