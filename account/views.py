@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
+from django.contrib.auth.views import PasswordChangeView
 
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from .models import User
@@ -20,3 +21,8 @@ class ProfileView(UpdateView):
     def get_object(self, *args, **kwargs):
         user = User.objects.get(username=self.request.user)
         return user
+
+
+class CustomPasswordChangeView(PasswordChangeView):
+    template_name = 'registration/change_password.html'
+    success_url = reverse_lazy('home')
