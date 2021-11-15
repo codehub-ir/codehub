@@ -1,26 +1,26 @@
 from django.urls import path, include
-from . import views
+from .views import visual, api
 
 urlpatterns = [
     # VISUAL
-    path('', views.index, name='home'),
-    path('docs/', views.docpage, name='documentation'),
-    path('new/', views.new, name='new'),
-    path('team/', views.team, name='team'),
-    path('snippet/<str:id>/', views.show, name='show'),
+    path('', visual.index, name='home'),
+    path('docs/', visual.docpage, name='documentation'),
+    path('new/', visual.new, name='new'),
+    path('team/', visual.team, name='team'),
+    path('snippet/<str:id>/', visual.show, name='show'),
 
     # API
-    path('api/v1/snippet/<str:SID>/', views.SnippetView.as_view()),
-    path('api/v1/snippet/', views.SnippetAdd.as_view()),
-    path('api/v1/team/', views.TeamView.as_view()),
+    path('api/v1/snippet/<str:SID>/', api.SnippetView.as_view()),
+    path('api/v1/snippet/', api.SnippetAdd.as_view()),
+    path('api/v1/team/', api.TeamView.as_view()),
 
     # API - ADMIN
-    path('api/v1/admin/snippet/', views.AdminSnippetView.as_view()),
-    path('api/v1/admin/snippet/<str:SID>/', views.AdminSnippetMod.as_view()),
-    path('api/v1/admin/suggest/', views.AdminSuggestAdd.as_view()),
-    path('api/v1/admin/suggest/<int:pk>', views.AdminSuggestMod.as_view()),
-    path('api/v1/admin/team/', views.AdminTeamAdd.as_view()),
-    path('api/v1/admin/team/<int:pk>', views.AdminTeamMod.as_view()),
+    path('api/v1/admin/snippet/', api.AdminSnippetView.as_view()),
+    path('api/v1/admin/snippet/<str:SID>/', api.AdminSnippetMod.as_view()),
+    path('api/v1/admin/suggest/', api.AdminSuggestAdd.as_view()),
+    path('api/v1/admin/suggest/<int:pk>', api.AdminSuggestMod.as_view()),
+    path('api/v1/admin/team/', api.AdminTeamAdd.as_view()),
+    path('api/v1/admin/team/<int:pk>', api.AdminTeamMod.as_view()),
 
     # API - Auth
     path('api-auth/', include('rest_framework.urls')),

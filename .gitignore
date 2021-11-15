@@ -131,3 +131,5 @@ dmypy.json
 
 # Additional ignores
 .vscode/
+
+.idea/*
