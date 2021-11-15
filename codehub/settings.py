@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [config('ALLOWED_HOST')]
+ALLOWED_HOSTS = ['codehub.pythonanywhere.com']
 
 
 # Application definition
