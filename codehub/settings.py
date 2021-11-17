@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+from django.urls import reverse_lazy
+
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -145,3 +147,4 @@ except:
 AUTH_USER_MODEL = 'account.User'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = reverse_lazy('login')
