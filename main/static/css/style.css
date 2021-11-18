@@ -1,0 +1,14 @@
+@font-face {
+    font-family: vazir;
+    src: url('../fonts/vazir/Farsi-Digits/Vazir-Medium-FD.eot');
+    src: url('../fonts/vazir/Farsi-Digits/Vazir-Medium-FD.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vazir/Farsi-Digits/Vazir-Medium-FD.woff2') format('woff2'),
+         url('../fonts/vazir/Farsi-Digits/Vazir-Medium-FD.woff') format('woff'),
+         url('../fonts/vazir/Farsi-Digits/Vazir-Medium-FD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: vazir;
+}
