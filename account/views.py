@@ -1,5 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.views import PasswordChangeView, LoginView
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
+
+from django.core.exceptions import PermissionDenied
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
 
@@ -11,6 +15,12 @@ class SignUpView(CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+
+    def get(self, request: HttpRequest, *args: str, **kwargs) -> HttpResponse:
+        if request.user.is_authenticated:
+            raise PermissionDenied()
+        else:
+            return super().get(request, *args, **kwargs)
 
 
 class ProfileView(LoginRequiredMixin, UpdateView):
@@ -27,3 +37,11 @@ class ProfileView(LoginRequiredMixin, UpdateView):
 class CustomPasswordChangeView(LoginRequiredMixin, PasswordChangeView):
     template_name = 'registration/password_change.html'
     success_url = reverse_lazy('home')
+
+
+class CustomLoginView(LoginView):
+    def get(self, request: HttpRequest, *args: str, **kwargs):
+        if request.user.is_authenticated:
+            raise PermissionDenied()
+        else:
+            return super().get(request, *args, **kwargs)
