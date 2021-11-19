@@ -1,6 +1,8 @@
 {% extends '_base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
+{% block carousel_image %}{% static 'img/profile-banner.png' %}{% endblock %}
 
 {% block content %}
 <div class="d-flex align-items-start">
@@ -40,7 +42,7 @@
                     <h5 class="modal-title" id="staticBackdropLabel">خروج از حساب کاربری</h5>
                 </div>
                 <div class="modal-body">
-                    آیا واقعا می خواهید از حساب خود خارج شوید!؟
+                    آیا واقعا می خواهید از حساب خود خارج شوید؟!
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn" data-bs-dismiss="modal">خیر</button>
