@@ -1,12 +1,9 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
-{% block title %}Sign Up{% endblock %}
+{% block title %}ساخت حساب کاربری جدید{% endblock %}
 
 {% block content %}
-<h2>Sign Up</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-</form>
+<h3>ساخت حساب کاربری</h3><br>
+{% crispy form %}
 {% endblock %}
