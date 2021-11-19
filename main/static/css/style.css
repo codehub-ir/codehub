@@ -13,6 +13,11 @@ body {
     font-family: vazir;
 }
 
-.crispy-form-item{
+.crispy-form-item {
     margin: 10px;
+}
+
+.new-feature-badge {
+    background: rgb(255,0,204);
+    background: linear-gradient(204deg, rgba(255,0,204,1) 0%, rgba(0,16,255,1) 100%); 
 }
