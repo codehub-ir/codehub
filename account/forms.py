@@ -22,6 +22,9 @@ class CustomUserUpdateForm(UserChangeForm):
         super().__init__(*args, **kwargs)
         self.fields['password'].widget = HiddenInput()
 
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'crispy-form-item'
+
     class Meta:
         model = User
         fields = ('display_name',
@@ -32,4 +35,4 @@ class CustomUserUpdateForm(UserChangeForm):
 
     helper = FormHelper()
     helper.add_input(Submit('submit', _('Update'),
-                     css_class='btn-primary crispy-submit-btn'))
+                     css_class='btn-primary crispy-form-item'))
