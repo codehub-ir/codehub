@@ -11,9 +11,19 @@ from .models import User
 
 class CustomUserCreationForm(UserCreationForm):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'crispy-form-item'
+
     class Meta:
         model = User
         fields = ('username', 'email', 'display_name')
+
+    helper = FormHelper()
+    helper.add_input(Submit('submit', _('Update'),
+                     css_class='btn-primary crispy-form-item'))
 
 
 class CustomUserUpdateForm(UserChangeForm):
