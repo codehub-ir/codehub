@@ -1,12 +1,15 @@
 {% extends '_base.html' %}
 
-{% block title %}Log In{% endblock %}
+{% block title %}ورود به حساب کاربری{% endblock %}
 
 {% block content %}
-<h2>Log In</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Log In</button>
-</form>
+<div class="container">
+    <h3>ورود به حساب کاربری</h3><br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">ورود</button> &#160;
+        <a href="{% url 'signup' %}" class="btn">ساخت حساب کاربری جدید</a>
+    </form>
+</div>
 {% endblock %}
