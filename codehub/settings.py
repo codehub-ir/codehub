@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # 3rd party pkgs
     'django_jalali',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -113,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-ir'
 
 TIME_ZONE = 'UTC'
 
@@ -137,6 +138,16 @@ MEDIA_ROOT = 'media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Crispy forms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Localization
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # Submitting the local changes
 
