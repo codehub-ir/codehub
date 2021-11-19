@@ -11,6 +11,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <link rel="icon" type="image/x-icon" href="{% static 'img/fav.ico' %}">
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 
@@ -18,8 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 m-2 rounded shadow-sm fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="https://raw.githubusercontent.com/codehub-ir/codehub-graphics/main/github-org/4x/typo-170.png"
-                    alt="" width="40" height="40">&#160;
+                <img src="{% static 'img/logo.png' %}" alt="" width="40" height="40">&#160;
                 کد هاب
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
