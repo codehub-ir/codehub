@@ -13,6 +13,6 @@ body {
     font-family: vazir;
 }
 
-.crispy-submit-btn{
-    margin-top: 20px;
+.crispy-form-item{
+    margin: 10px;
 }
