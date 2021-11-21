@@ -1,4 +1,3 @@
-from django.db.models import fields
 from django.test import TestCase
 
 from account.models import User
