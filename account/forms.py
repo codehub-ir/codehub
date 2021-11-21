@@ -22,7 +22,7 @@ class CustomUserCreationForm(UserCreationForm):
         fields = ('username', 'email', 'display_name')
 
     helper = FormHelper()
-    helper.add_input(Submit('submit', _('Update'),
+    helper.add_input(Submit('submit', _('Signup'),
                      css_class='btn-primary crispy-form-item'))
 
 
