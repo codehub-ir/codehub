@@ -16,6 +16,7 @@ class CustomUserCreationForm(UserCreationForm):
 
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'crispy-form-item'
+            visible.field.widget.attrs['spellcheck'] = 'false'
 
     class Meta:
         model = User
@@ -34,6 +35,7 @@ class CustomUserUpdateForm(UserChangeForm):
 
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'crispy-form-item'
+            visible.field.widget.attrs['spellcheck'] = 'false'
 
     class Meta:
         model = User
