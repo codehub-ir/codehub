@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load pygmentify_tags %}
+
+{% block title %}{{snippet.title}}{% endblock %}
+
+
+{% block script %}
+<script src="{% static 'js/snippet.js' %}"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% pygmentify_css %}">{% endblock %}
+
+{% block content %}
+<h3 style="word-wrap:break-word; line-height: 40px;">{{snippet.title}} <button type="button"
+        class="btn btn-outline-secondary" onclick='copyElementText("{{snippet.get_absolute_url}}")'>کپی در
+        کلیپ&#8204;بورد</button></h3>
+<hr>
+<p style="word-wrap:break-word;">{{snippet.description}}</p>
+
+{% pygmentify %}
+<pre class="{{snippet.lang}} code-snippet pre-snippet">{{snippet.body}}</pre>
+{% endpygmentify %}
+{% endblock %}
