@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 00:57+0330\n"
+"POT-Creation-Date: 2021-11-22 10:09+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: account/forms.py:25
+#: account/forms.py:26
 msgid "Signup"
 msgstr "ثبت‌نام"
 
-#: account/forms.py:47
+#: account/forms.py:49
 msgid "Update"
 msgstr "بروزرسانی"
 
@@ -41,3 +41,23 @@ msgstr "آدرس توئیتر"
 #: account/models.py:21
 msgid "Github Address"
 msgstr "آدرس گیت هاب"
+
+#: main/forms.py:30
+msgid "Create"
+msgstr "بساز"
+
+#: main/models.py:23
+msgid "Title"
+msgstr "عنوان"
+
+#: main/models.py:28
+msgid "Description"
+msgstr "توضیحات"
+
+#: main/models.py:32
+msgid "Script"
+msgstr "کد"
+
+#: main/models.py:35
+msgid "Programming Language"
+msgstr "زبان برنامه‌نویسی"
