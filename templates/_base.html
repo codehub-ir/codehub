@@ -15,7 +15,11 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+    {% block script %}{% endblock %}
+
     <link rel="icon" type="image/x-icon" href="{% static 'img/fav.ico' %}">
+
+    {% block style %}{% endblock %}
 
     <title>{% block title %}کد هاب، اولین سرویس متن&#8204;نشان پارسی{% endblock %}</title>
 </head>
@@ -35,11 +39,12 @@
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% block snippet_active %}{% endblock %}" aria-current="page"
-                            href="#">تکه&#8204;کد جدید</a>
+                            href="{% url 'new_snippet' %}">تکه&#8204;کد جدید</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% block ticket_active %}{% endblock %}" href="#">برچسب جدید <span
-                                class="badge bg-primary new-feature-badge">ویژگی نو!</span></a>
+                                class="badge bg-primary new-feature-badge">ویژگی
+                                نو!</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% block download_active %}{% endblock %}" href="#">دانلود</a>
@@ -52,9 +57,9 @@
                     </li>
                     <li class="nav-item">
                         <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="جست&#8204;جو برچسب.."
+                            <input class="form-control me-2" type="search" placeholder="جستجو برچسب.."
                                 aria-label="Search">&nbsp;
-                            <button class="btn btn-outline-primary" type="submit">جست&#8204;جو</button>
+                            <button class="btn btn-outline-primary" type="submit">جستجو</button>
                         </form>
                     </li>
                 </ul>
@@ -85,7 +90,7 @@
 
     <main>
         <div class="d-flex justify-content-center">
-            <div class="col-md-10 p-5" style="margin-top: 20px;">
+            <div class="col-md-8 p-5">
                 {% block content %}{% endblock %}
             </div>
         </div>
