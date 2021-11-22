@@ -9,6 +9,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: ubuntumono;
+    src: url('../fonts/ubuntu/UbuntuMono-Regular.ttf') format('truetype');
+}
+
 body {
     font-family: vazir;
 }
@@ -20,4 +25,21 @@ body {
 .new-feature-badge {
     background: rgb(255,0,204);
     background: linear-gradient(204deg, rgba(255,0,204,1) 0%, rgba(0,16,255,1) 100%); 
+}
+
+.code-snippet {
+    text-align: left;
+    font-family: ubuntumono;
+    text-decoration: none;
+    direction: ltr;
+}
+
+.pre-snippet {
+    font-size: 17px;
+    background-color: #292d3e;
+    padding: 17px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
 }
