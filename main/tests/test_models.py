@@ -13,7 +13,7 @@ class SnippetTestCase(TestCase):
             'title': 'simple title',
             'description': 'some description',
             'body': 'code snippet',
-            'lang': LANGUAGES[0][1],  # ApacheConf
+            'lang': LANGUAGES[0][1],  # Arduino
         }
 
     def setUp(self) -> None:
