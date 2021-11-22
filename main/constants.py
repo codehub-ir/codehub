@@ -5,26 +5,25 @@ that are beings used in the main application
 
 # lang choices for Snippet.lang
 LANGUAGES = (
-    ('apacheconf', 'ApacheConf'),
-    ('arduino', 'Arduino'),
-    ('bash', 'Bash'),
-    ('c', 'C'),
-    ('cpp', 'C++'),
-    ('csharp', 'C#'),
-    ('css', 'CSS'),
+    ('arduino', 'Arduino'),      # + icon
+    ('bash', 'Bash'),            # + icon
+    ('c', 'C'),                  # + icon
+    ('cpp', 'C++'),              # + icon
+    ('csharp', 'C#'),            # + icon
+    ('css', 'CSS'),              # + icon
     ('cython', 'Cython'),
-    ('dart', 'Dart'),
-    ('docker', 'DockerFile'),
-    ('go', 'Go'),
-    ('html', 'HTML'),
-    ('java', 'Java'),
-    ('js', 'JavaScript'),
-    ('json', 'JSON'),
-    ('lua', 'Lua'),
-    ('md', 'markdown'),
-    ('mysql', 'MySQL'),
-    ('php', 'PHP'),
-    ('python', 'Python'),
+    ('dart', 'Dart'),            # + icon
+    ('docker', 'DockerFile'),    # + icon
+    ('go', 'Go'),                # + icon
+    ('html', 'HTML'),            # + icon
+    ('java', 'Java'),            # + icon
+    ('js', 'JavaScript'),        # + icon
+    ('json', 'JSON'),            # + icon
+    ('lua', 'Lua'),              # + icon
+    ('md', 'markdown'),          # + icon
+    ('mysql', 'MySQL'),          # + icon
+    ('php', 'PHP'),              # + icon
+    ('python', 'Python'),        # + icon
     ('python2', 'Python 2.x'),
-    ('rb', 'Ruby'),
+    ('rb', 'Ruby'),              # + icon
 )
