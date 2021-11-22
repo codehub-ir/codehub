@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # 3rd party pkgs
     'django_jalali',
     'crispy_forms',
+    'pygmentify',
 ]
 
 MIDDLEWARE = [
@@ -162,3 +163,11 @@ AUTH_USER_MODEL = 'account.User'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = reverse_lazy('login')
+
+# Pygments configs
+PYGMENTIFY = {
+    'style': 'monokai',
+    'cssclass': 'highlight'
+}
+
+PYGMENTIFY_MINIFY = True
