@@ -14,12 +14,13 @@
 
 {% block content %}
 <h3 style="word-wrap:break-word; line-height: 40px;">{{snippet.title}} <button type="button"
-        class="btn btn-outline-secondary" onclick='copyElementText("{{snippet.get_absolute_url}}")'>کپی در
-        کلیپ&#8204;بورد</button></h3>
+                class="btn btn-outline-secondary" onclick='copyElementText("{{snippet.get_absolute_url}}")'>کپی در
+                کلیپ&#8204;بورد</button></h3>
 <hr>
 <p style="word-wrap:break-word;">{{snippet.description}}</p>
 
 {% pygmentify %}
+<img class="code-snippet-lang" src="{% static 'img/icons/material/'|add:snippet.lang|add:'.svg' %}">
 <pre class="{{snippet.lang}} code-snippet pre-snippet">{{snippet.body}}</pre>
 {% endpygmentify %}
 {% endblock %}
