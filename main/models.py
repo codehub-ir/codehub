@@ -1,5 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.utils.translation import gettext as _
+
 from django.urls import reverse
 from django_jalali.db import models as jmodels
 
@@ -18,21 +20,21 @@ class Snippet(models.Model):
         editable=False,
     )
     title = models.CharField(
+        verbose_name=_('Title'),
         max_length=50,
         default='',
     )
     description = models.TextField(
-        null=True,
+        verbose_name=_('Description'),
+        blank=True
     )
     body = models.TextField(
-        verbose_name='Script',
-        null=True,
+        verbose_name=_('Script'),
     )
     lang = models.CharField(
-        verbose_name='Language',
+        verbose_name=_('Programming Language'),
         max_length=250,
         choices=LANGUAGES,
-        null=True,
     )
     created_on = jmodels.jDateField(
         auto_now=True,
@@ -49,8 +51,12 @@ class Snippet(models.Model):
     # TODO: Implementing get_absolute_url method
 
     def save(self, *args, **kwargs):
-        self.id = generateSID()
+        if not self.id:
+            self.id = generateSID()
         super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('snippet', args=[str(self.id)])
 
 
 class Tag(models.Model):
