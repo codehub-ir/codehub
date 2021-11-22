@@ -43,3 +43,15 @@ body {
     word-wrap: break-word;
     text-align: justify;
 }
+
+.code-snippet-lang {
+    position: absolute;
+    right: auto;
+    top: auto;
+    width: 35px;
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 8px;
+    pointer-events: none;
+}
