@@ -1,6 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView, LoginView
-from django.http import HttpRequest, HttpResponse
+
+from django.http import HttpRequest, HttpResponse, request
 from django.shortcuts import render
 
 from django.core.exceptions import PermissionDenied
@@ -9,6 +10,8 @@ from django.views.generic import CreateView, UpdateView
 
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from .models import User
+
+from main.models import Snippet, Ticket
 
 
 class SignUpView(CreateView):
@@ -32,6 +35,19 @@ class ProfileView(LoginRequiredMixin, UpdateView):
     def get_object(self, *args, **kwargs):
         user = User.objects.get(username=self.request.user)
         return user
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ProfileView, self).get_context_data(*args, **kwargs)
+
+        context['snippets'] = Snippet.objects.filter(
+            created_by=self.request.user.id
+        ).order_by('-created_on')
+
+        context['tickets'] = Ticket.objects.filter(
+            created_by=self.request.user.id
+        ).order_by('-created_on')
+
+        return context
 
 
 class CustomPasswordChangeView(LoginRequiredMixin, PasswordChangeView):
