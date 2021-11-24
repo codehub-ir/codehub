@@ -11,7 +11,6 @@ LANGUAGES = (
     ('cpp', 'C++'),              # + icon
     ('csharp', 'C#'),            # + icon
     ('css', 'CSS'),              # + icon
-    ('cython', 'Cython'),
     ('dart', 'Dart'),            # + icon
     ('docker', 'DockerFile'),    # + icon
     ('go', 'Go'),                # + icon
@@ -24,6 +23,5 @@ LANGUAGES = (
     ('mysql', 'MySQL'),          # + icon
     ('php', 'PHP'),              # + icon
     ('python', 'Python'),        # + icon
-    ('python2', 'Python 2.x'),
     ('rb', 'Ruby'),              # + icon
 )
