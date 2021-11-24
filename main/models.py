@@ -36,9 +36,15 @@ class Snippet(models.Model):
         max_length=250,
         choices=LANGUAGES,
     )
-    created_on = jmodels.jDateField(
+    created_on = jmodels.jDateTimeField(
         auto_now=True,
         editable=False,
+    )
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        editable=False,
+        null=True,
     )
 
     # TODO: Adding a view counter using django-hitcount pkg
@@ -66,7 +72,7 @@ class Tag(models.Model):
     description = models.CharField(
         max_length=150,
     )
-    created_on = jmodels.jDateField(
+    created_on = jmodels.jDateTimeField(
         auto_now=True,
         editable=False,
     )
@@ -88,14 +94,14 @@ class Ticket(models.Model):
     is_valid = models.BooleanField(
         default=False,
     )
-    created_on = jmodels.jDateField(
+    created_on = jmodels.jDateTimeField(
         auto_now=True,
         editable=False,
     )
     created_by = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        editable=False,
+        #        editable=False,
         null=True,
     )
 
@@ -125,7 +131,7 @@ class Comment(models.Model):
         editable=False,
         null=True,
     )
-    created_on = jmodels.jDateField(
+    created_on = jmodels.jDateTimeField(
         auto_now=True,
         editable=False,
     )
