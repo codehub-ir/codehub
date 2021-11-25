@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-25 07:53+0330\n"
+"POT-Creation-Date: 2021-11-25 08:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Signup"
 msgstr "ثبت‌نام"
 
-#: account/forms.py:49
+#: account/forms.py:49 account/forms.py:66
 msgid "Update"
 msgstr "بروزرسانی"
 
@@ -50,6 +50,10 @@ msgstr "رد"
 msgid "Approve"
 msgstr "تائید"
 
+#: main/constants.py:37
+msgid "Pending"
+msgstr "در انتظار"
+
 #: main/forms.py:28
 msgid "Create"
 msgstr "بساز"
@@ -74,10 +78,9 @@ msgstr "زبان برنامه‌نویسی"
 msgid "Tags"
 msgstr "تگ ها"
 
-#: main/models.py:99 main/models.py:134
+#: main/models.py:99 main/models.py:133
 msgid "Validation"
 msgstr "اعتبارسنجی"
 
-#: main/models.py:103
-msgid "Ticket will be \"Pending\" if you keep this field empty."
-msgstr "در صورتی که این فیلد خالی بماند، برچسب در حالت انتظار قرار می گیرد."
+#~ msgid "Ticket will be \"Pending\" if you keep this field empty."
+#~ msgstr "در صورتی که این فیلد خالی بماند، برچسب در حالت انتظار قرار می گیرد."
