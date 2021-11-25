@@ -8,7 +8,7 @@ from django.core.exceptions import PermissionDenied
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
 
-from .forms import CustomUserCreationForm, CustomUserUpdateForm
+from .forms import CustomUserCreationForm, CustomUserUpdateForm, CustomPasswordChangeForm
 from .models import User
 
 from main.models import Snippet, Ticket
@@ -51,8 +51,9 @@ class ProfileView(LoginRequiredMixin, UpdateView):
 
 
 class CustomPasswordChangeView(LoginRequiredMixin, PasswordChangeView):
-    template_name = 'registration/password_change.html'
+    template_name = 'registration/change_password.html'
     success_url = reverse_lazy('home')
+    form_class = CustomPasswordChangeForm
 
 
 class CustomLoginView(LoginView):
