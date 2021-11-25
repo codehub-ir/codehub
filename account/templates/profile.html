@@ -40,29 +40,23 @@
         {% if tickets %}
         <h5>تا امروز، تعداد {{tickets.count}} برچسب ایجاد کردید!</h5><br>
         {% for ticket in tickets %}
-        {% if ticket.is_valid %}
-        <div class="card shadow-sm border-primary mb-3">
-            <div class="card-body text-dark">
-                <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
-                <h5 class="card-title">{{ticket.title}}</h5>
-                <p class="card-text">{{ticket.description}}</p>
-                <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}} <span
-                            style="float: left;">وضعیت: منتشر شد</span></small>
-                </p>
-            </div>
-        </div>
-        {% else %}
         <div class="card shadow-sm mb-3">
             <div class="card-body text-dark">
                 <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
-                <h5 class="card-title">{{ticket.title}}</h5>
+                <h5 class="card-title">{{ticket.title}}
+                    {% if ticket.is_valid == None %}
+                    <span class="badge bg-secondary">در حال بررسی..</span>
+                    {% elif ticket.is_valid %}
+                    <span class="badge bg-success">منتشر شد!</span>
+                    {% else %}
+                    <span class="badge bg-danger">رد شد!</span>
+                    {% endif %}
+                </h5>
                 <p class="card-text">{{ticket.description}}</p>
-                <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}<span
-                            style="float: left;">وضعیت: در انتظار</span></small>
+                <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}</small>
                 </p>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
         {% else %}
 
