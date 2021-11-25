@@ -95,12 +95,11 @@ class Ticket(models.Model):
     slug = models.SlugField(
         editable=False,
     )
-    is_valid = models.BooleanField(
+    is_valid = models.CharField(
         verbose_name=_('Validation'),
         choices=VERIFICATIONS,
-        blank=True,
-        null=True,
-        help_text=_('Ticket will be "Pending" if you keep this field empty.')
+        default='pending',
+        max_length=20,
     )
     created_on = jmodels.jDateTimeField(
         auto_now=True,
@@ -130,10 +129,11 @@ class Comment(models.Model):
         Ticket,
         on_delete=models.CASCADE,
     )
-    is_valid = models.BooleanField(
+    is_valid = models.CharField(
         verbose_name=_('Validation'),
         choices=VERIFICATIONS,
-        blank=True,
+        default='pending',
+        max_length=20,
     )
     created_by = models.ForeignKey(
         User,
