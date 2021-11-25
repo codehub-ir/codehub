@@ -3,6 +3,9 @@ This file contains all sort of data/configs
 that are beings used in the main application
 '''
 
+from django.utils.translation import gettext as _
+
+
 # lang choices for Snippet.lang
 LANGUAGES = (
     ('arduino', 'Arduino'),      # + icon
@@ -24,4 +27,11 @@ LANGUAGES = (
     ('php', 'PHP'),              # + icon
     ('python', 'Python'),        # + icon
     ('rb', 'Ruby'),              # + icon
+)
+
+# verification choices for Ticket
+# abd Comment verification
+VERIFICATIONS = (
+    (False, _('Reject')),
+    (True, _('Approve')),
 )
