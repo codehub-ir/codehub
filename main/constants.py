@@ -30,8 +30,9 @@ LANGUAGES = (
 )
 
 # verification choices for Ticket
-# abd Comment verification
+# and Comment is_verified
 VERIFICATIONS = (
-    (False, _('Reject')),
-    (True, _('Approve')),
+    ('rejected', _('Reject')),
+    ('approved', _('Approve')),
+    ('pending', _('Pending')),
 )
