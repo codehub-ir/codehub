@@ -7,7 +7,7 @@ from django_jalali.db import models as jmodels
 
 from account.models import User
 
-from .constants import LANGUAGES
+from .constants import LANGUAGES, VERIFICATIONS
 from .utils import generateSID
 
 
@@ -82,17 +82,25 @@ class Tag(models.Model):
 
 class Ticket(models.Model):
     title = models.CharField(
+        verbose_name=_('Title'),
         max_length=150,
     )
-    description = models.TextField()
+    description = models.TextField(
+        verbose_name=_('Description')
+    )
     tags = models.ManyToManyField(
         Tag,
+        verbose_name=_('Tags'),
     )
     slug = models.SlugField(
         editable=False,
     )
     is_valid = models.BooleanField(
-        default=False,
+        verbose_name=_('Validation'),
+        choices=VERIFICATIONS,
+        blank=True,
+        null=True,
+        help_text=_('Ticket will be "Pending" if you keep this field empty.')
     )
     created_on = jmodels.jDateTimeField(
         auto_now=True,
@@ -123,7 +131,9 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
     )
     is_valid = models.BooleanField(
-        default=False,
+        verbose_name=_('Validation'),
+        choices=VERIFICATIONS,
+        blank=True,
     )
     created_by = models.ForeignKey(
         User,
