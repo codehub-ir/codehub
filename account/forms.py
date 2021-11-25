@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm, PasswordChangeForm
 from django.utils.translation import gettext as _
 
 from django.forms import HiddenInput
@@ -44,6 +44,23 @@ class CustomUserUpdateForm(UserChangeForm):
                   'twitter',
                   'github',
                   )
+
+    helper = FormHelper()
+    helper.add_input(Submit('submit', _('Update'),
+                     css_class='btn-primary crispy-form-item'))
+
+
+class CustomPasswordChangeForm(PasswordChangeForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'crispy-form-item'
+            visible.field.widget.attrs['spellcheck'] = 'false'
+
+    class Meta:
+        model = User
 
     helper = FormHelper()
     helper.add_input(Submit('submit', _('Update'),
