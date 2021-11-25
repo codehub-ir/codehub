@@ -44,16 +44,19 @@
             <div class="card-body text-dark">
                 <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
                 <h5 class="card-title">{{ticket.title}}
-                    {% if ticket.is_valid == None %}
-                    <span class="badge bg-secondary">در حال بررسی..</span>
-                    {% elif ticket.is_valid %}
+                    {% if ticket.is_valid == "approved" %}
                     <span class="badge bg-success">منتشر شد!</span>
-                    {% else %}
+                    {% elif ticket.is_valid == "rejected" %}
                     <span class="badge bg-danger">رد شد!</span>
+                    {% else %}
+                    <span class="badge bg-secondary">در حال بررسی..</span>
                     {% endif %}
                 </h5>
                 <p class="card-text">{{ticket.description}}</p>
                 <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}</small>
+                    {% for tag in ticket.tags.all %}
+                    <small class="badge text-primary" style="direction: ltr;">{{tag.name}}#</small>
+                    {% endfor %}
                 </p>
             </div>
         </div>
