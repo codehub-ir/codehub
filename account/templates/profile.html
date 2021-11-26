@@ -55,7 +55,8 @@
                 <p class="card-text">{{ticket.description}}</p>
                 <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}</small>
                     {% for tag in ticket.tags.all %}
-                    <small class="badge text-primary" style="direction: ltr;">{{tag.name}}#</small>
+                    <small class="badge text-primary m-1"
+                        style="direction: ltr; border: solid 1px; float:left">{{tag.name}}#</small>
                     {% endfor %}
                 </p>
             </div>
