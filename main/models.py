@@ -1,5 +1,5 @@
 from django.db import models
-from django.template.defaultfilters import slugify
+from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
 from django.urls import reverse
@@ -8,7 +8,7 @@ from django_jalali.db import models as jmodels
 from account.models import User
 
 from .constants import LANGUAGES, VERIFICATIONS
-from .utils import generateSID
+from .utils import generateUID
 
 
 class Snippet(models.Model):
@@ -58,7 +58,7 @@ class Snippet(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
-            self.id = generateSID()
+            self.id = generateUID(Snippet)
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
@@ -81,6 +81,12 @@ class Tag(models.Model):
 
 
 class Ticket(models.Model):
+    id = models.CharField(
+        verbose_name='ID',
+        max_length=11,
+        primary_key=True,
+        editable=False,
+    )
     title = models.CharField(
         verbose_name=_('Title'),
         max_length=150,
@@ -117,8 +123,15 @@ class Ticket(models.Model):
     def __str__(self): return self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.title, allow_unicode=True)
+
+        if not self.id:
+            self.id = generateUID(Ticket)
+
         return super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('ticket', args=[str(self.id), str(self.slug)])
 
 
 class Comment(models.Model):
