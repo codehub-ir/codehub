@@ -4,13 +4,11 @@ used as a data generator in the models, views, and etc.
 '''
 
 
-def generateSID(nb=5) -> str:
+def generateUID(model, nb=5) -> str:
     from secrets import token_hex
 
-    from .models import Snippet
+    uid = token_hex(nbytes=nb)
+    while model.objects.filter(id=uid).exists():
+        uid = token_hex(nbytes=nb)
 
-    sid = token_hex(nbytes=nb)
-    while Snippet.objects.filter(id=sid).exists():
-        sid = token_hex(nbytes=nb)
-
-    return sid
+    return uid
