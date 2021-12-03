@@ -1,9 +1,12 @@
 from django.views.generic import TemplateView, CreateView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
+from django.urls import reverse
+from django.shortcuts import redirect
 
-from main.models import Snippet, Ticket
-from main.forms import SnippetCreateForm, TicketCreateForm
+from main.models import Snippet, Ticket, Comment
+from main.forms import SnippetCreateForm, TicketCreateForm, CommentCreateForm
 
 
 class HomeView(TemplateView):
@@ -38,13 +41,27 @@ class TicketCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class TicketView(DetailView):
+class TicketView(DetailView, CreateView):
     model = Ticket
     template_name = 'ticket.html'
+    form_class = CommentCreateForm
 
     def get_context_data(self, **kwargs):
         ticket = kwargs['object']
         if ticket.created_by == self.request.user or ticket.is_valid == 'approved':
-            return super().get_context_data(**kwargs)
+            context = super(TicketView, self).get_context_data(**kwargs)
+            context['comments'] = Comment.objects.filter(
+                ticket=ticket)
+            return context
         else:
             raise Http404()
+
+    def form_valid(self, form, **kwargs):
+        user = self.request.user
+        if user.is_authenticated:
+            ticket = self.get_object()
+            form.instance.ticket = ticket
+            form.instance.created_by = user
+            return super().form_valid(form)
+        else:
+            return redirect(reverse('login'))
