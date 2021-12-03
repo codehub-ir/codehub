@@ -142,12 +142,6 @@ class Comment(models.Model):
         Ticket,
         on_delete=models.CASCADE,
     )
-    is_valid = models.CharField(
-        verbose_name=_('Validation'),
-        choices=VERIFICATIONS,
-        default='pending',
-        max_length=20,
-    )
     created_by = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -161,3 +155,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.created_by} on {self.ticket}'
+
+    def get_absolute_url(self):
+        return reverse('ticket', args=[str(self.ticket.id), str(self.ticket.slug)])
