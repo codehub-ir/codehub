@@ -1,8 +1,15 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load markdown_extras %}
+{% load crispy_forms_tags %}
 
 {% block title %}{{ticket.title}}{% endblock %}
 
 {% block content %}
-{{ticket}}
+<h2>{{ticket.title}}</h2>
+<hr>
+{{ticket.description|markdown|safe}}
+<h3>کامنت ها</h3>
+{{comments}}
+{% crispy form %}
 {% endblock %}
