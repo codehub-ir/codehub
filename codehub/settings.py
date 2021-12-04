@@ -33,12 +33,19 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [
 # Application definition
 
 INSTALLED_APPS = [
+    ## Django Admin Interface Dependencies
+    'admin_interface',
+    'colorfield',
+
+    ## Django Dependencies
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    ## Our Dependencies
     'snippet',
     'rest_framework',
     'rest_framework.authtoken',
@@ -73,7 +80,7 @@ ROOT_URLCONF = 'codehub.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -183,3 +190,6 @@ WEBSITE_ADDR = 'http://%s/' % ALLOWED_HOSTS[0]
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SILENCED_SYSTEM_CHECKS = ['security.W019']
