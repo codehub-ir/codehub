@@ -1,21 +1,26 @@
 @font-face {
-  font-family: 'yekan';
-  src: local('Yekan'),
-    url('../fonts/Yekan/Yekan.ttf') format("truetype");
+  font-family: "yekan";
+  src: local("Yekan"), url("../fonts/Yekan/Yekan.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'vazir';
-  src: local('Vzir'),
-    url('../fonts/Vazir/Vazir.ttf') format("truetype");
+  font-family: "vazir";
+  src: local("Vzir"), url("../fonts/Vazir/Vazir.ttf") format("truetype");
 }
 
 body {
-  font-family: vazir;
+  font-family: "vazir", system-ui, -apple-system, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   background-color: #f8f9fa;
 }
 
-main h1, h2, h3, h4, h5, h6 {
+main h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #4b4b4b;
 }
 
@@ -36,15 +41,15 @@ h3 {
   font-size: 25px;
 }
 
-h4{
+h4 {
   font-size: 22px;
 }
 
-h5{
+h5 {
   font-size: 18px;
 }
 
-h6{
+h6 {
   font-size: 15px;
 }
 
@@ -64,7 +69,7 @@ h6{
 }
 
 .form-group #req {
-  color:red;
+  color: red;
 }
 
 .code-block {
@@ -78,11 +83,11 @@ h6{
   margin: 12px 0;
 }
 
-.code-block span{
+.code-block span {
   unicode-bidi: embed;
 }
 
-.block-error{
+.block-error {
   border-color: red;
 }
 
@@ -100,19 +105,20 @@ h6{
   align-items: center;
   text-align: center;
 }
-.separator span{
+.separator span {
   margin: 0px 15px;
 }
-.separator::before, .separator::after {
-  content: '';
+.separator::before,
+.separator::after {
+  content: "";
   flex: 1;
-  border-bottom: 1px solid #DFE0E1;
+  border-bottom: 1px solid #dfe0e1;
 }
 .separator::before {
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 .separator::after {
-  margin-left: .25em;
+  margin-left: 0.25em;
 }
 
 /*--------------------------------------------------------------
@@ -137,7 +143,7 @@ footer .context {
 
 .section {
   margin-top: 60px;
-  margin-bottom: 60px
+  margin-bottom: 60px;
 }
 
 .api-url {
@@ -158,18 +164,18 @@ footer .context {
   background-color: white;
 }
 
-.snippetid{
-  color:rgb(77, 77, 77);
+.snippetid {
+  color: rgb(77, 77, 77);
   cursor: pointer;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
-.snippetid:hover{
+.snippetid:hover {
   text-decoration: underline;
   color: #242424;
 }
 
-.toast{
+.toast {
   position: absolute;
   z-index: 1;
   width: 250px;
@@ -184,21 +190,45 @@ footer .context {
 }
 
 .suggest1 {
-  border-image-source: linear-gradient(135deg, rgba(255, 0, 0, 1) 13%, rgba(255, 0, 46, 1) 28%, rgba(255, 0, 101, 1) 43%, rgba(255, 0, 140, 1) 57%, rgba(255, 0, 204, 1) 73%, rgba(255, 0, 251, 1) 87%);
+  border-image-source: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 1) 13%,
+    rgba(255, 0, 46, 1) 28%,
+    rgba(255, 0, 101, 1) 43%,
+    rgba(255, 0, 140, 1) 57%,
+    rgba(255, 0, 204, 1) 73%,
+    rgba(255, 0, 251, 1) 87%
+  );
 }
 
 .suggest2 {
-  border-image-source: linear-gradient(139deg, rgba(255, 0, 0, 1) 9%, rgba(253, 232, 45, 1) 100%);
+  border-image-source: linear-gradient(
+    139deg,
+    rgba(255, 0, 0, 1) 9%,
+    rgba(253, 232, 45, 1) 100%
+  );
 }
 
 .suggest3 {
-  border-image-source: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 }
 
 .suggest4 {
-  border-image-source: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  border-image-source: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 .suggest5 {
-  border-image-source: linear-gradient(148deg, rgba(0, 251, 255, 1) 0%, rgba(0, 255, 49, 1) 100%);
+  border-image-source: linear-gradient(
+    148deg,
+    rgba(0, 251, 255, 1) 0%,
+    rgba(0, 255, 49, 1) 100%
+  );
 }
