@@ -35,6 +35,10 @@ class Snippet(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = _('Snippet')
+        verbose_name_plural = _('Snippets')
+
 
 class Suggest(models.Model):
     title = models.CharField(max_length=30, verbose_name=_('Title'))
@@ -46,6 +50,10 @@ class Suggest(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = _('Suggest')
+        verbose_name_plural = _('Suggest')
 
 
 class Teammate(models.Model):
@@ -61,3 +69,7 @@ class Teammate(models.Model):
 
     def __str__(self):
         return '%s (%s)' % (self.name, self.position)
+
+    class Meta:
+        verbose_name = _('Teammate')
+        verbose_name_plural = _('Teammates')
