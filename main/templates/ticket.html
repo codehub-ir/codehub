@@ -7,9 +7,22 @@
 
 {% block content %}
 <h2>{{ticket.title}}</h2>
-<hr>
+<p class="text-muted">نوشته شده توسط {{ticket.created_by}} در {{ticket.created_on|date:'Y.m.d'}}</p><br>
 {{ticket.description|markdown|safe}}
-<h3>کامنت ها</h3>
-{{comments}}
+<p align="center" class="text-muted">نظرات</p>
+{% for comment in comments %}
+<div class="card shadow-sm mb-3">
+    <div class="card-body text-dark">
+        <p class="card-title">{{comment.body}}</p>
+        <p class="card-text"><small class="text-muted">نوشته شده توسط {{comment.created_by}} در {{comment.created_on|date:'Y.m.d'}}</small>
+        </p>
+    </div>
+ </div>
+{% endfor %}
+<br>
+{% if user.is_authenticated %}
 {% crispy form %}
+{% else %}
+<h5>جهت ثبت نظر جدید ابتدا، <a href="{% url 'login' %}">وارد شوید</a>!</h5>
+{% endif %}
 {% endblock %}
