@@ -61,5 +61,5 @@ class CommentCreateForm(ModelForm):
         fields = ('body',)
 
     helper = FormHelper()
-    helper.add_input(Submit('submit', _('Create'),
+    helper.add_input(Submit('submit', _('Comment'),
                      css_class='btn-primary crispy-form-item'))
