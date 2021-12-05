@@ -1,6 +1,5 @@
-from django.views.generic import TemplateView, CreateView, DetailView
+from django.views.generic import ListView, CreateView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.urls import reverse
 from django.shortcuts import redirect
@@ -9,8 +8,12 @@ from main.models import Snippet, Ticket, Comment
 from main.forms import SnippetCreateForm, TicketCreateForm, CommentCreateForm
 
 
-class HomeView(TemplateView):
+class HomeView(ListView):
     template_name = 'home.html'
+    model = Ticket
+    queryset = Ticket.objects.filter(
+        is_valid='approved').order_by('-created_on')[:5]
+    context_object_name = 'tickets'
 
 
 class SnippetCreateView(CreateView):
