@@ -136,7 +136,7 @@ class Ticket(models.Model):
 
 class Comment(models.Model):
     body = models.CharField(
-        verbose_name=_('Comment'),
+        verbose_name=_('Comment Body'),
         max_length=250,
     )
     ticket = models.ForeignKey(
