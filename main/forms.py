@@ -39,6 +39,9 @@ class TicketCreateForm(ModelForm):
             visible.field.widget.attrs['class'] = 'crispy-form-item'
             visible.field.widget.attrs['spellcheck'] = 'false'
 
+        self.fields['description'].widget.attrs['placeholder'] = _(
+            'How can I convert `count` variable in..')
+
     class Meta:
         model = Ticket
         fields = ('title', 'description', 'tags')
