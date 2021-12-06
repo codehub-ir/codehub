@@ -54,7 +54,7 @@ class TicketView(DetailView, CreateView):
         if ticket.created_by == self.request.user or ticket.is_valid == 'approved':
             context = super(TicketView, self).get_context_data(**kwargs)
             context['comments'] = Comment.objects.filter(
-                ticket=ticket)
+                ticket=ticket).order_by('-created_on')
             return context
         else:
             raise Http404()
