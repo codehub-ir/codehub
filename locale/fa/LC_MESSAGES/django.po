@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-05 21:26+0000\n"
+"POT-Creation-Date: 2021-12-06 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,11 +54,15 @@ msgstr "تائید"
 msgid "Pending"
 msgstr "در انتظار"
 
-#: main/forms.py:26 main/forms.py:47
+#: main/forms.py:26 main/forms.py:50
 msgid "Create"
 msgstr "بساز"
 
-#: main/forms.py:64
+#: main/forms.py:43
+msgid "How can I convert `count` variable in.."
+msgstr "**چجوری** متغیر `count` در کدم رو تغییر بدم..\n\r```\nint count = 5;\nSystem.Console.WriteLine(count); // should be String\n```"
+
+#: main/forms.py:67
 msgid "Comment"
 msgstr "ثبت نظر"
 
@@ -85,6 +89,10 @@ msgstr "تگ ها"
 #: main/models.py:105
 msgid "Validation"
 msgstr "اعتبارسنجی"
+
+#: main/models.py:139
+msgid "Comment Body"
+msgstr "نظر"
 
 #~ msgid "Body"
 #~ msgstr "بدنه"
