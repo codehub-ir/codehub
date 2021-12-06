@@ -6,23 +6,44 @@
 {% block title %}{{ticket.title}}{% endblock %}
 
 {% block content %}
-<h2>{{ticket.title}}</h2>
+<h2>{{ticket.title}}
+    {% if ticket.is_valid == "rejected" %}
+    <span class="badge bg-danger">رد شد!</span>
+    {% elif ticket.is_valid == "pending" %}
+    <span class="badge bg-secondary">در حال بررسی..</span>
+    {% endif %}
+</h2>
 <p class="text-muted">نوشته شده توسط {{ticket.created_by}} در {{ticket.created_on|date:'Y.m.d'}}</p><br>
 {{ticket.description|markdown|safe}}
+
+{% if comments %}
 <p align="center" class="text-muted">نظرات</p>
 {% for comment in comments %}
 <div class="card shadow-sm mb-3">
     <div class="card-body text-dark">
         <p class="card-title">{{comment.body}}</p>
-        <p class="card-text"><small class="text-muted">نوشته شده توسط {{comment.created_by}} در {{comment.created_on|date:'Y.m.d'}}</small>
+        <p class="card-text"><small class="text-muted">نوشته شده توسط {{comment.created_by}} در
+                {{comment.created_on|date:'Y.m.d'}}</small>
         </p>
     </div>
- </div>
+</div>
 {% endfor %}
+{% else %}
+<p align="center" class="text-muted">اولین نظر را شما ثبت کنید!</p>
+{% endif %}
 <br>
+{% if ticket.is_valid != 'approved' %}
+<div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+        <h5 class="card-title">برچسب ساخته شده، عمومی نیست!</h5>
+        <p class="card-text">برچسب شما در دست بررسی می باشد و تا زمان تایید شدن، تنها برای شما قابل نمایش است.</p>
+    </div>
+</div>
+{% else %}
 {% if user.is_authenticated %}
 {% crispy form %}
 {% else %}
-<h5>جهت ثبت نظر جدید ابتدا، <a href="{% url 'login' %}">وارد شوید</a>!</h5>
+<h5>جهت ثبت نظر، ابتدا <a href="{% url 'login' %}?next={{ticket.get_absolute_url}}">وارد شوید</a>!</h5>
+{% endif %}
 {% endif %}
 {% endblock %}
