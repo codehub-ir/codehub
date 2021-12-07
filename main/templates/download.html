@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block download_active %}active{% endblock %}
+
+{% block content %}
+<div class="row text-center">
+    <div class="col-sm p-2"></div>
+    <div class="col-sm p-2"></div>
+    <div class="col-sm p-2">
+        <button type="button" class="btn btn-outline-primary">اندروید</button>
+    </div>
+    <div class="col-sm p-2">
+        <button type="button" class="btn btn-outline-primary disabled"><span class="bi-windows"> ویندوز</span></button>
+    </div>
+    <div class="col-sm p-2">
+        <button type="button" class="btn btn-outline-primary disabled"><span class="bi-apple"> آیفون</span></button>
+    </div>
+    <div class="col-sm p-2"></div>
+    <div class="col-sm p-2"></div>
+</div>
+{% endblock %}
