@@ -1,0 +1,1 @@
+[ ] Displaying tags in the ticket page
