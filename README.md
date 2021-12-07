@@ -1,4 +1,5 @@
 CodeHub :blue_heart:
 
-### Todo
+### ToDo
 [ ] Displaying tags in the ticket page
+[ ] Setting page titles and meta data
