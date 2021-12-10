@@ -144,11 +144,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-# Localization
+# Localization + Time
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
+TIME_ZONE = 'Asia/Tehran'
 
 # Submitting the local changes
 
