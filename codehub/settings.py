@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'django_jalali',
     'crispy_forms',
     'pygmentify',
+
+    # drf
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
