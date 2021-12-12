@@ -5,11 +5,14 @@ Django==3.2.9
 django-crispy-forms==1.13.0
 django-hashids==0.5.0
 django-jalali==4.3.0
+django-markdownx==3.0.1
 django-pygmentify==0.3.7
+djangorestframework==3.12.4
 hashids==1.3.1
 importlib-metadata==4.8.2
 jdatetime==3.6.4
 Markdown==3.3.6
+Pillow==8.4.0
 pycodestyle==2.8.0
 Pygments==2.10.0
 python-decouple==3.5
