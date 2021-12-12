@@ -36,3 +36,10 @@ VERIFICATIONS = (
     ('approved', _('Approve')),
     ('pending', _('Pending')),
 )
+
+# ReDoc description
+REDOC_DESCRIPTION = '''
+        Codehub provides users/devs multiple restful API services. This restful service
+        allows developers to work with CodeHub Web Services on any platform and machine.
+        Make sure you follow the documentation and observe all conditions and requirements.
+'''
