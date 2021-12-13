@@ -1,6 +1,8 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block carousel_image %}{% static 'img/home-banner.png' %}{% endblock %}
+
 {% block content %}
 <h3>سرویس متن&#8204;باز و رایگان کد هاب!</h3>
 <p>
@@ -90,7 +92,8 @@
     <div class="card-body text-dark">
         <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
         <h5 class="card-title">{{ticket.title}}</h5>
-        <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'d-m-Y'}}</small>
+        <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'d-m-Y'}} توسط
+                {{ticket.created_by}}</small>
         </p>
     </div>
 </div>
