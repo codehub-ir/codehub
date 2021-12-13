@@ -1,8 +1,30 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block meta_og_title %}خدمات کد هاب برای توسعه دهندگان{% endblock %}
+
+{% block meta_description %}ما علاوه بر تمام خدماتی که در اختیار شما قرار دادیم، یک سرویس Rest API هم برای توسعه دهندگان
+و برنامه نویس ها ایجاد
+کردیم تا به راحتی از خدمات کد هاب، روی هر پلتفورمی استفاده کنند و اپلیکیشن های خودشون رو توسعه بدن.{% endblock %}
+
+{% block meta_og_description %}ما علاوه بر تمام خدماتی که در اختیار شما قرار دادیم، یک سرویس Rest API هم برای توسعه
+دهندگان و برنامه نویس ها ایجاد
+کردیم تا به راحتی از خدمات کد هاب، روی هر پلتفورمی استفاده کنند و اپلیکیشن های خودشون رو توسعه بدن.{% endblock %}
+
+{% block meta_og_url %}{% url 'development' %}{% endblock %}
+
+{% block meta_tw_title %}خدمات کد هاب برای توسعه دهندگان{% endblock %}
+
+{% block meta_tw_description %}ما علاوه بر تمام خدماتی که در اختیار شما قرار دادیم، یک سرویس Rest API هم برای توسعه
+دهندگان و برنامه نویس ها ایجاد
+کردیم تا به راحتی از خدمات کد هاب، روی هر پلتفورمی استفاده کنند و اپلیکیشن های خودشون رو توسعه بدن.{% endblock %}
+
+{% block meta_tw_url %}{% url 'development' %}{% endblock %}
+
 {% block development_active %}active{% endblock %}
 {% block title %}کد هاب برای توسعه دهندگان{% endblock %}
+
+{% block carousel_image %}{% static 'img/development-banner.png' %}{% endblock %}
 
 {% block content %}
 <h4>کد هاب برای توسعه دهندگان</h4>

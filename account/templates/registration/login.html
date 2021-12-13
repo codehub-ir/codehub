@@ -1,6 +1,23 @@
 {% extends '_base.html' %}
+{% load static %}
+
+{% block meta_og_title %}ورود به حساب کاربری{% endblock %}
+
+{% block meta_description %}ورود یا ایجاد حساب کاربری جدید در کد هاب{% endblock %}
+
+{% block meta_og_description %}ورود یا ایجاد حساب کاربری جدید در کد هاب{% endblock %}
+
+{% block meta_og_url %}{% url 'login' %}{% endblock %}
+
+{% block meta_tw_title %}ورود به حساب کاربری{% endblock %}
+
+{% block meta_tw_description %}ورود یا ایجاد حساب کاربری جدید در کد هاب{% endblock %}
+
+{% block meta_tw_url %}{% url 'login' %}{% endblock %}
 
 {% block title %}ورود به حساب کاربری{% endblock %}
+
+{% block carousel_image %}{% static 'img/login-banner.png' %}{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -9,7 +26,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">ورود</button> &#160;
-        <a href="{% url 'signup' %}" class="btn">ساخت حساب کاربری جدید</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline-primary">ساخت حساب کاربری جدید</a>
     </form>
 </div>
 {% endblock %}

@@ -1,8 +1,28 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
+{% block meta_og_title %}ایجاد تکه&#8204;کد جدید{% endblock %}
+
+{% block meta_description %}با ساخت تکه&#8204;کد در کد هاب و اشتراک گذاری خطا های خود، سریعتر مشکل رو برطرف
+کنید!{% endblock %}
+
+{% block meta_og_description %}با ساخت تکه&#8204;کد در کد هاب و اشتراک گذاری خطا های خود، سریعتر مشکل رو برطرف
+کنید!{% endblock %}
+
+{% block meta_og_url %}{% url 'new_snippet' %}{% endblock %}
+
+{% block meta_tw_title %}ایجاد تکه&#8204;کد جدید{% endblock %}
+
+{% block meta_tw_description %}با ساخت تکه&#8204;کد در کد هاب و اشتراک گذاری خطا های خود، سریعتر مشکل رو برطرف
+کنید!{% endblock %}
+
+{% block meta_tw_url %}{% url 'new_snippet' %}{% endblock %}
 
 {% block snippet_active %}active{% endblock %}
 {% block title %}ایجاد تکه&#8204;کد جدید{% endblock %}
+
+{% block carousel_image %}{% static 'img/snippet-banner.png' %}{% endblock %}
 
 {% block content %}
 {% crispy form %}

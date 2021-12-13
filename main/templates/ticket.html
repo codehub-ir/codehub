@@ -3,6 +3,20 @@
 {% load markdown_extras %}
 {% load crispy_forms_tags %}
 
+{% block meta_og_title %}{{ticket.title}}{% endblock %}
+
+{% block meta_description %}{{ticket.description}}{% endblock %}
+
+{% block meta_og_description %}{{ticket.description}}{% endblock %}
+
+{% block meta_og_url %}{{ticket.get_absolute_url}}{% endblock %}
+
+{% block meta_tw_title %}{{ticket.title}}{% endblock %}
+
+{% block meta_tw_description %}{{ticket.description}}{% endblock %}
+
+{% block meta_tw_url %}{{ticket.get_absolute_url}}{% endblock %}
+
 {% block title %}{{ticket.title}}{% endblock %}
 
 {% block content %}
@@ -12,8 +26,7 @@
 {{ticket.description|markdown|safe}}
 
 {% for tag in ticket.tags.all %}
-<small class="badge text-primary m-1"
-    style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
+<small class="badge text-primary m-1" style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
 {% endfor %}
 <br>
 
@@ -24,7 +37,7 @@
     <div class="card-body text-dark">
         <p class="card-title">{{comment.body}}</p>
         <p class="card-text"><small class="text-muted">نوشته شده توسط <a href="#">{{comment.created_by}}</a></small>
-                <small class="text-muted" style="float:left">{{comment.created_on|date:'Y-m-d ‍ H:i'}}</small>
+            <small class="text-muted" style="float:left">{{comment.created_on|date:'Y-m-d ‍ H:i'}}</small>
         </p>
     </div>
 </div>

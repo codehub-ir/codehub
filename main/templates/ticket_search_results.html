@@ -1,6 +1,23 @@
 {% extends '_base.html' %}
+{% load static %}
+
+{% block meta_og_title %}نتیجه جستجو عبارت '{{searched_keyword}}' در برچسب ها..{% endblock %}
+
+{% block meta_description %}{{tickets.count}} برچسب مرتبط یافت شد!{% endblock %}
+
+{% block meta_og_description %}{{tickets.count}} برچسب مرتبط یافت شد!{% endblock %}
+
+{% block meta_og_url %}{% url 'ticket_search_results' %}?t={{searched_keyword}}{% endblock %}
+
+{% block meta_tw_title %}نتیجه جستجو عبارت '{{searched_keyword}}' در برچسب ها..{% endblock %}
+
+{% block meta_tw_description %}{{tickets.count}} برچسب مرتبط یافت شد!{% endblock %}
+
+{% block meta_tw_url %}{% url 'ticket_search_results' %}?t={{searched_keyword}}{% endblock %}
 
 {% block title %}نتیجه جستجو برای "{{searched_keyword}}"{% endblock %}
+
+{% block carousel_image %}{% static 'img/ticket-search-banner.png' %}{% endblock %}
 
 {% block content %}
 <h3>نتیجه جستجو عبارت "{{searched_keyword}}" در برچسب ها..</h3><br>

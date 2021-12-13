@@ -1,8 +1,30 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block meta_og_title %}کد هاب در دیگر پلتفورم ها{% endblock %}
+
+{% block meta_description %}به راحتی با استفاده از دیگر محصولات تیم کد هاب، به تمامی سرویس ها و قابلیت ها، در دیگر
+پلتفورم ها دسترسی داشته
+باشید.{% endblock %}
+
+{% block meta_og_description %}به راحتی با استفاده از دیگر محصولات تیم کد هاب، به تمامی سرویس ها و قابلیت ها، در دیگر
+پلتفورم ها دسترسی داشته
+باشید.{% endblock %}
+
+{% block meta_og_url %}{% url 'download' %}{% endblock %}
+
+{% block meta_tw_title %}کد هاب در دیگر پلتفورم ها{% endblock %}
+
+{% block meta_tw_description %}به راحتی با استفاده از دیگر محصولات تیم کد هاب، به تمامی سرویس ها و قابلیت ها، در دیگر
+پلتفورم ها دسترسی داشته
+باشید.{% endblock %}
+
+{% block meta_tw_url %}{% url 'download' %}{% endblock %}
+
 {% block download_active %}active{% endblock %}
 {% block title %}کد هاب در دیگر پلتفورم ها{% endblock %}
+
+{% block carousel_image %}{% static 'img/download-banner.png' %}{% endblock %}
 
 {% block content %}
 <h4>کد هاب در دیگر پلتفورم ها</h4>

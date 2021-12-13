@@ -1,8 +1,28 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
+{% block meta_og_title %}ایجاد برچسب جدید{% endblock %}
+
+{% block meta_description %}یک برچسب جدید بسازید و خطا ها و اسکریپت هاتون رو به نمایش بذارید تا از نظرات دیگر کاربران
+باخبر شید!{% endblock %}
+
+{% block meta_og_description %}یک برچسب جدید بسازید و خطا ها و اسکریپت هاتون رو به نمایش بذارید تا از نظرات دیگر کاربران
+باخبر شید!{% endblock %}
+
+{% block meta_og_url %}{% url 'new_ticket' %}{% endblock %}
+
+{% block meta_tw_title %}ایجاد برچسب جدید{% endblock %}
+
+{% block meta_tw_description %}یک برچسب جدید بسازید و خطا ها و اسکریپت هاتون رو به نمایش بذارید تا از نظرات دیگر کاربران
+باخبر شید!{% endblock %}
+
+{% block meta_tw_url %}{% url 'new_ticket' %}{% endblock %}
 
 {% block ticket_active %}active{% endblock %}
 {% block title %}ایجاد برچسب جدید{% endblock %}
+
+{% block carousel_image %}{% static 'img/ticket-banner.png' %}{% endblock %}
 
 {% block content %}
 {% crispy form %}

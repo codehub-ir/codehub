@@ -1,7 +1,27 @@
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
+{% block meta_og_title %}ساخت حساب کاربری جدید{% endblock %}
+
+{% block meta_description %}با ایجاد حساب کاربری، به راحتی به برچسب ها نظر بدین و برچسب های خودتون رو ایجاد کنید!
+{% endblock %}
+
+{% block meta_og_description %}با ایجاد حساب کاربری، به راحتی به برچسب ها نظر بدین و برچسب های خودتون رو ایجاد کنید!
+{% endblock %}
+
+{% block meta_og_url %}{% url 'signup' %}{% endblock %}
+
+{% block meta_tw_title %}ساخت حساب کاربری جدید{% endblock %}
+
+{% block meta_tw_description %}با ایجاد حساب کاربری، به راحتی به برچسب ها نظر بدین و برچسب های خودتون رو ایجاد کنید!
+{% endblock %}
+
+{% block meta_tw_url %}{% url 'signup' %}{% endblock %}
 
 {% block title %}ساخت حساب کاربری جدید{% endblock %}
+
+{% block carousel_image %}{% static 'img/signup-banner.png' %}{% endblock %}
 
 {% block content %}
 <h3>ساخت حساب کاربری</h3><br>
