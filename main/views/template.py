@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import Http404
 from django.urls import reverse
 from django.shortcuts import redirect
+from django.db.models import Q
 
 from main.models import Snippet, Ticket, Comment
 from main.forms import SnippetCreateForm, TicketCreateForm, CommentCreateForm
@@ -68,3 +69,28 @@ class TicketView(DetailView, CreateView):
             return super().form_valid(form)
         else:
             return redirect(reverse('login'))
+
+
+class TicketSearchResultsView(ListView):
+    model = Ticket
+    template_name = 'ticket_search_results.html'
+    context_object_name = 'tickets'
+    extra_context = {
+        'searched_keyword': None,
+    }
+
+    def get_queryset(self):
+        key = self.request.GET.get('t')
+        self.extra_context['searched_keyword'] = key
+
+        tickets = Ticket.objects.filter(
+            Q(title__icontains=key,
+              is_valid='approved')
+        )
+        return tickets
+
+    def get_context_data(self, **kwargs):
+        context = super(TicketSearchResultsView,
+                        self).get_context_data(**kwargs)
+        context.update(self.extra_context)
+        return context
