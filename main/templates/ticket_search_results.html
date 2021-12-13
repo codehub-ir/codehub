@@ -1,7 +1,9 @@
 {% extends '_base.html' %}
 
+{% block title %}نتیجه جستجو برای "{{searched_keyword}}"{% endblock %}
+
 {% block content %}
-<h3>جستجوی عبارت کلیدی "{{searched_keyword}}" در برچسب ها..</h3><br>
+<h3>نتیجه جستجو عبارت "{{searched_keyword}}" در برچسب ها..</h3><br>
 {% if tickets %}
 {% for ticket in tickets %}
 <div class="card shadow-sm mb-3">
