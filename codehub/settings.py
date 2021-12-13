@@ -155,13 +155,6 @@ LOCALE_PATHS = [
 ]
 TIME_ZONE = 'Asia/Tehran'
 
-# Submitting the local changes
-
-try:
-    from .local_settings import *
-except:
-    pass
-
 # User Authentication Setup
 
 AUTH_USER_MODEL = 'account.User'
@@ -176,3 +169,10 @@ PYGMENTIFY = {
 }
 
 PYGMENTIFY_MINIFY = True
+
+# Submitting the local changes
+
+try:
+    from .local_settings import *
+except:
+    pass
