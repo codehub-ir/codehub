@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<h3>جستجوی عبارت کلیدی "{{searched_keyword}}" در برچسب ها..</h3><br>
+{% if tickets %}
+{% for ticket in tickets %}
+<div class="card shadow-sm mb-3">
+    <div class="card-body text-dark">
+        <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
+        <h5 class="card-title">{{ticket.title}}</h5>
+        <p class="card-text">
+            <small class="text-muted">نوشته شده توسط {{ticket.created_by}}</small> -
+            {% for tag in ticket.tags.all %}
+            <small class="badge text-primary" style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
+            {% endfor %}
+            <small class="text-muted" style="float:left">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}</small>
+        </p>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p align="center">برچسبی یافت نشد!</p>
+{% endif %}
+{% endblock %}
