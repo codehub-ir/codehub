@@ -53,7 +53,7 @@
                     {% endif %}
                 </h5>
                 <p class="card-text">{{ticket.description|truncatewords:15}}</p>
-                <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'Y.m.d'}}</small>
+                <p class="card-text"><small class="text-muted">ثبت شده در {{ticket.created_on |date:'d-m-Y'}}</small>
                     {% for tag in ticket.tags.all %}
                     <small class="badge text-primary m-1"
                         style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
@@ -77,7 +77,7 @@
                 <a href="{{snippet.get_absolute_url}}" class="stretched-link"></a>
                 <h5 class="card-title">{{snippet.title}}</h5>
                 <p class="card-text">{{snippet.description|truncatewords:15}}</p>
-                <p class="card-text"><small class="text-muted">ثبت شده در {{snippet.created_on |date:'Y.m.d'}}</small>
+                <p class="card-text"><small class="text-muted">ثبت شده در {{snippet.created_on |date:'d-m-Y'}}</small>
                     &#160;<img width="20" src="{% static 'img/icons/material/'|add:snippet.lang|add:'.svg' %}"
                         alt="{{snippet.lang}}">
                 </p>
