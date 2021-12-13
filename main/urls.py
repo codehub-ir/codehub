@@ -12,7 +12,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title='CodeHub Restful API Service Documentation',
+        title='CodeHub RESTful API Service Documentation',
         default_version='v1',
         description=REDOC_DESCRIPTION,
         contact=openapi.Contact(email='lnxpylnxpy@gmail.com'),
