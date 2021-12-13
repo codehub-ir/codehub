@@ -9,7 +9,7 @@
         <a href="{{ticket.get_absolute_url}}" class="stretched-link"></a>
         <h5 class="card-title">{{ticket.title}}</h5>
         <p class="card-text">
-            <small class="text-muted">نوشته شده توسط {{ticket.created_by}}</small> -
+            <small class="text-muted">نوشته شده توسط {{ticket.created_by}}</small>&#160;
             {% for tag in ticket.tags.all %}
             <small class="badge text-primary" style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
             {% endfor %}
