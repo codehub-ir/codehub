@@ -53,5 +53,9 @@ body {
     background-color: #fff;
     border-radius: 20px;
     margin: 8px;
-    pointer-events: none;
+    transition: opacity .3s;
+}
+
+.code-snippet-lang:hover {
+    opacity: 0.1;
 }
