@@ -117,3 +117,4 @@ GitHub.sublime-settings
 
 # Custom Ignores
 local_settings.py
+static/
