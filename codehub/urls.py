@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from decouple import config
+
+
 urlpatterns = [
-    path('adminn/', admin.site.urls),
+    path(config('ADMIN_PATH'), admin.site.urls),
 
     # Accounting URLs
     path('', include('account.urls')),
