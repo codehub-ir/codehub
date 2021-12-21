@@ -5,7 +5,7 @@
     <p align="center">
     <span>
         <img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="Version">
-        <img src="https://github.com/lnxpy/lnxpy/blob/main/icons/checkout-live-here.svg">
+        <a href="https://codehub.pythonanywhere.com"><img src="https://github.com/lnxpy/lnxpy/blob/main/icons/checkout-live-here.svg"></a>
         <img src="https://forthebadge.com/images/badges/open-source.svg">
     </span>
 </p><br>
