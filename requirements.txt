@@ -5,10 +5,10 @@ certifi==2021.10.8
 charset-normalizer==2.0.9
 coreapi==2.3.3
 coreschema==0.0.4
-Django==3.2.9
+Django==4.0
 django-crispy-forms==1.13.0
 django-hashids==0.5.0
-django-jalali==4.3.0
+django-jalali==5.0.0
 django-markdownx==3.0.1
 django-pygmentify==0.3.7
 djangorestframework==3.12.4
@@ -18,7 +18,7 @@ idna==3.3
 importlib-metadata==4.8.2
 inflection==0.5.1
 itypes==1.2.0
-jdatetime==3.6.4
+jdatetime==3.7.0
 Jinja2==3.0.3
 Markdown==3.3.6
 MarkupSafe==2.0.1
