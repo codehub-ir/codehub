@@ -159,3 +159,17 @@ class Comment(models.Model):
 
     def get_absolute_url(self):
         return reverse('ticket', args=[str(self.ticket.id), str(self.ticket.slug)])
+
+
+class Event(models.Model):
+    title = models.CharField(
+        max_length=150,
+    )
+    body = models.TextField(blank=True)
+    created_on = jmodels.jDateTimeField(
+        auto_now=True,
+        editable=False,
+    )
+
+    def __str__(self):
+        return self.title
