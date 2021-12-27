@@ -139,7 +139,7 @@
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">جدیدترین رویداد ها</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body offcanvas-codehub">
             {% if events.exists %}
             {% for event in events %}
             <div class="container">
@@ -151,10 +151,6 @@
             {% else %}
             <p class="text-muted">رویدادی موجود نیست!</p>
             {% endif %}
-
-            <div class="fixed-bottom m-2">
-                <p class="text-muted">کد هاب، اولین سرویس متن نشان پارسی</p>
-            </div>
         </div>
     </div>
 

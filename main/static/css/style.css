@@ -59,3 +59,10 @@ body {
 .code-snippet-lang:hover {
     opacity: 0.1;
 }
+
+.offcanvas-codehub {
+    background-image: url("../img/offcanvas.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
