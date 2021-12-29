@@ -66,3 +66,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.code-snippet span.linenos {
+    color: #969699;
+    margin-right: 20px;
+    user-select: none;
+}
