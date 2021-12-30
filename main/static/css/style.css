@@ -42,6 +42,7 @@ body {
     white-space: pre-wrap;
     word-wrap: break-word;
     text-align: justify;
+    unicode-bidi: embed;
 }
 
 .code-snippet-lang {
