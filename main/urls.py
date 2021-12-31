@@ -2,7 +2,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from .views.template import HomeView, SnippetCreateView, SnippetView, TicketCreateView, TicketView, TicketSearchResultsView
-from .views.api import SnippetCreateAPIView, SnippetAPIView
+from .views.api import SnippetCreateAPIView, SnippetAPIView, ListEventsAPIView
 from .constants import REDOC_DESCRIPTION
 
 from rest_framework import permissions
@@ -39,6 +39,7 @@ urlpatterns = [
     # -- v1.0 --
     path('api/v1/snippet', SnippetCreateAPIView.as_view()),
     path('api/v1/snippet/<str:pk>', SnippetAPIView.as_view()),
+    path('api/v1/event', ListEventsAPIView.as_view()),
     path('api/v1/docs', schema_view.with_ui('redoc',
          cache_timeout=0), name='api_docs_v1'),
 

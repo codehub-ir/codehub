@@ -73,3 +73,33 @@ body {
     margin-right: 20px;
     user-select: none;
 }
+
+.ticket-description blockquote{
+    border-right: solid thin;
+    color:#afafaf;
+    font-style: italic;
+    padding: 10px 15px 1px 0px;
+}
+
+.ticket-description p code{
+    font-family: ubuntumono;
+    background-color: #292d3e;
+    padding: 3px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.ticket-description img{
+    width: 100%;
+}
+
+.ticket-description pre {
+    font-size: 17px;
+    color: #292d3e;
+    background-color: #f8f9fa;
+    padding: 17px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}

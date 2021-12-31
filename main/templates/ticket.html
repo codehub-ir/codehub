@@ -23,7 +23,9 @@
 <h3>{{ticket.title}}</h3>
 <p class="text-muted">نوشته شده توسط <a href="#">{{ticket.created_by}}</a> در {{ticket.created_on|date:'d-m-Y'}}</p>
 
-{{ticket.description|markdown|safe}}
+<div class="ticket-description">
+    {{ticket.description|markdown|safe}}
+</div>
 
 {% for tag in ticket.tags.all %}
 <small class="badge text-primary m-1" style="direction: ltr; border: solid 1px;">{{tag.name}}#</small>
