@@ -15,6 +15,9 @@ Codehub is the first Persian pastebin service that is being developed as open so
 ### Contribution
 Any developer can contribute to Codehub and all your contributions are passionately welcome. Before you start contributing, you better follow the instruction and steps on [CONTRIBUTING.md](./CONTRIBUTING.md).
 
+### ToDo
+- [ ] Observing PEP8 for Imports
+
 ### About @lnxpy
 I'm [Alireza](https://github.com/lnxpy). Python programmer and open source developer, interested in Machine Learning and CodeHub creator. Follow me on socials. :)
 
