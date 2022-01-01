@@ -19,4 +19,4 @@ class SnippetAPIView(RetrieveAPIView):
 
 class ListEventsAPIView(ListAPIView):
     serializer_class = EventSerializer
-    queryset = Event.objects.all().order_by('-created_on')
+    queryset = Event.objects.all().order_by('-created_on')[:5]
