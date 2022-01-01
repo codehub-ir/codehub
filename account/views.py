@@ -11,7 +11,7 @@ from django.views.generic import CreateView, UpdateView
 from .forms import CustomUserCreationForm, CustomUserUpdateForm, CustomPasswordChangeForm
 from .models import User
 
-from main.models import Snippet, Ticket
+from main.models import Snippet, Ticket, Comment
 
 
 class SignUpView(CreateView):
@@ -44,6 +44,10 @@ class ProfileView(LoginRequiredMixin, UpdateView):
         ).order_by('-created_on')
 
         context['tickets'] = Ticket.objects.filter(
+            created_by=self.request.user.id
+        ).order_by('-created_on')
+
+        context['comments'] = Comment.objects.filter(
             created_by=self.request.user.id
         ).order_by('-created_on')
 
