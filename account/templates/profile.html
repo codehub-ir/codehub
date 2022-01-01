@@ -21,6 +21,10 @@
             type="button" role="tab" aria-controls="pills-snippets" aria-selected="false">تکه&#8204;کد ها</button>
     </li>
     <li class="nav-item p-1" role="presentation">
+        <button class="nav-link" id="pills-comments-tab" data-bs-toggle="pill" data-bs-target="#pills-comments"
+            type="button" role="tab" aria-controls="pills-comments" aria-selected="false">نظرات</button>
+    </li>
+    <li class="nav-item p-1" role="presentation">
         <button class="nav-link disabled" id="pills-settings-tab" data-bs-toggle="pill" data-bs-target="#pills-settings"
             type="button" role="tab" aria-controls="pills-settings" aria-selected="false">تنظیمات</button>
     </li>
@@ -37,7 +41,7 @@
         <p>برای تغییر رمز کاربری، <a href="{% url 'change_password' %}">اینجا</a> را کلیک کنید.</p>
     </div>
     <div class="tab-pane fade" id="pills-tickets" role="tabpanel" aria-labelledby="pills-tickets-tab">
-        {% if tickets %}
+        {% if tickets.exists %}
         <h5>تا امروز، تعداد {{tickets.count}} برچسب ایجاد کردید!</h5><br>
         {% for ticket in tickets %}
         <div class="card shadow-sm mb-3">
@@ -69,7 +73,7 @@
     </div>
     <div class="tab-pane fade" id="pills-snippets" role="tabpanel" aria-labelledby="pills-snippets-tab">
 
-        {% if snippets %}
+        {% if snippets.exists %}
         <h5>تا امروز، تعداد {{snippets.count}} تکه&#8204;کد ساختید!</h5><br>
         {% for snippet in snippets %}
         <div class="card shadow-sm mb-3">
@@ -86,6 +90,26 @@
         {% endfor %}
         {% else %}
         <p align="center">هنوز تکه&#8204;کدی ایجاد نکردید! :(</p>
+        {% endif %}
+
+    </div>
+    <div class="tab-pane fade" id="pills-comments" role="tabpanel" aria-labelledby="pills-comments-tab">
+
+        {% if comments.exists %}
+        <h5>تا امروز، تعداد {{comments.count}} نظر ثبت کردید!</h5><br>
+        {% for comment in comments %}
+        <div class="card shadow-sm mb-3">
+            <div class="card-body text-dark">
+                <a href="{{comment.ticket.get_absolute_url}}" class="stretched-link"></a>
+                <h5 class="card-title text-primary">#{{comment.ticket.title}}</h5>
+                <p class="card-text">{{comment.body|truncatewords:15}}</p>
+                <p class="card-text"><small class="text-muted">ثبت شده در {{comment.created_on |date:'d-m-Y'}}</small>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p align="center">هنوز نظری ثبت نکردید! :(</p>
         {% endif %}
 
     </div>
