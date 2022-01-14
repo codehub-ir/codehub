@@ -19,7 +19,7 @@ Any developer can contribute to Codehub and all your contributions are passionat
 - [ ] Observing PEP8 for Imports
 
 ### About @lnxpy
-I'm [Alireza](https://github.com/lnxpy). Python programmer and open source developer, interested in Machine Learning and CodeHub creator. Follow me on socials. :)
+I'm [Alireza](https://github.com/lnxpy). Python programmer and open source developer, interested in Machine Learning and [@codehub-ir](https://github.com/codehub-ir) creator. Follow me on socials. :)
 
 <p align="center">
     <a href="https://github.com/lnxpy"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
