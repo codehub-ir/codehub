@@ -24,5 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
+      env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        ADMIN_PATH: ${{ secrets.ADMIN_PATH }}
       run: |
-        python manage.py test --patern="test_*.py"
+        echo ${{SECRET_KEY}} >> .env
+        echo ${{ADMIN_PATH}} >> .env
+        python manage.py test --pattern="test_*.py"
