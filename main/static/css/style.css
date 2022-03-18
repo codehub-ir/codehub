@@ -18,6 +18,10 @@ body {
     font-family: vazir;
 }
 
+.content p {
+    text-align: justify;
+}
+
 .crispy-form-item {
     margin: 10px;
 }
