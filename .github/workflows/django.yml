@@ -28,6 +28,6 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
         ADMIN_PATH: ${{ secrets.ADMIN_PATH }}
       run: |
-        echo ${{SECRET_KEY}} >> .env
-        echo ${{ADMIN_PATH}} >> .env
+        echo $SECRET_KEY >> .env
+        echo $ADMIN_PATH >> .env
         python manage.py test --pattern="test_*.py"
