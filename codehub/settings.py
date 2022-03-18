@@ -173,7 +173,7 @@ PYGMENTIFY = {
 
 PYGMENTIFY_MINIFY = True
 
-# Submitting the local changes
+# Overwriting the local configs
 
 try:
     from .local_settings import *
