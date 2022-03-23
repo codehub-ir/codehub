@@ -11,7 +11,8 @@ from django.views.generic import CreateView, UpdateView
 from .forms import CustomUserCreationForm, CustomUserUpdateForm, CustomPasswordChangeForm
 from .models import User
 
-from main.models import Snippet, Ticket, Comment
+from snippets.models import Snippet
+from tickets.models import Ticket, Comment
 
 
 class SignUpView(CreateView):
