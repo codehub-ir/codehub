@@ -1,13 +1,12 @@
+from accounts.models import User
 from django.db import models
-from .constants import VERIFICATIONS
-from django_jalali.db import models as jmodels
+from django.urls import reverse
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
-from accounts.models import User
+from django_jalali.db import models as jmodels
 from main.utils import generateUID
-from django.urls import reverse
 
-
+from .constants import VERIFICATIONS
 
 
 class Tag(models.Model):

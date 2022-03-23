@@ -1,16 +1,11 @@
-from django.db import models
-
-from django.utils.translation import gettext as _
-
-from django_jalali.db import models as jmodels
-
 from accounts.models import User
-
-from main.utils import generateUID
-from .constants import LANGUAGES
+from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext as _
+from django_jalali.db import models as jmodels
+from main.utils import generateUID
 
-
+from .constants import LANGUAGES
 
 
 class Snippet(models.Model):

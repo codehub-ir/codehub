@@ -1,9 +1,7 @@
 from django.urls import path
 
-from .views import SnippetCreateView, SnippetView, SnippetCreateAPIView, SnippetAPIView
-
-
-
+from .views import (SnippetAPIView, SnippetCreateAPIView, SnippetCreateView,
+                    SnippetView)
 
 urlpatterns = [
     # Template URLs

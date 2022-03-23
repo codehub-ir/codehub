@@ -1,18 +1,16 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.views import PasswordChangeView, LoginView
-
+from django.contrib.auth.views import LoginView, PasswordChangeView
+from django.core.exceptions import PermissionDenied
 from django.http import HttpRequest, HttpResponse, request
 from django.shortcuts import render
-
-from django.core.exceptions import PermissionDenied
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
-
-from .forms import CustomUserCreationForm, CustomUserUpdateForm, CustomPasswordChangeForm
-from .models import User
-
 from snippets.models import Snippet
-from tickets.models import Ticket, Comment
+from tickets.models import Comment, Ticket
+
+from .forms import (CustomPasswordChangeForm, CustomUserCreationForm,
+                    CustomUserUpdateForm)
+from .models import User
 
 
 class SignUpView(CreateView):

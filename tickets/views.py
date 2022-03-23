@@ -1,13 +1,12 @@
-from django.views.generic import ListView, CreateView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import Http404
-from django.urls import reverse
-from django.shortcuts import redirect
 from django.db.models import Q
+from django.http import Http404
+from django.shortcuts import redirect
+from django.urls import reverse
+from django.views.generic import CreateView, DetailView, ListView
 
-from .models import Ticket, Comment
-from .forms import TicketCreateForm, CommentCreateForm
-
+from .forms import CommentCreateForm, TicketCreateForm
+from .models import Comment, Ticket
 
 
 class TicketCreateView(LoginRequiredMixin, CreateView):

@@ -1,7 +1,6 @@
-from django.test import TestCase
 from accounts.models import User  # Codehub custom user model
-
 from django.contrib.auth import login
+from django.test import TestCase
 
 
 class UserTestCase(TestCase):

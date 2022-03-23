@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 from snippets.constants import LANGUAGES
 from snippets.models import Snippet
 

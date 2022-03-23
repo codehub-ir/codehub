@@ -1,10 +1,9 @@
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm, PasswordChangeForm
-from django.utils.translation import gettext as _
-
-from django.forms import HiddenInput
-
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
+from django.contrib.auth.forms import (PasswordChangeForm, UserChangeForm,
+                                       UserCreationForm)
+from django.forms import HiddenInput
+from django.utils.translation import gettext as _
 
 from .models import User
 

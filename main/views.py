@@ -1,9 +1,8 @@
 from django.views.generic import ListView
 from rest_framework.generics import ListAPIView
-
 from tickets.models import Ticket
-from .models import Event
 
+from .models import Event
 from .serializers import EventSerializer
 
 

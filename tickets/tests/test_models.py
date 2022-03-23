@@ -1,7 +1,6 @@
-from django.test import TestCase
-
 from accounts.models import User
-from tickets.models import Comment , Tag, Ticket
+from django.test import TestCase
+from tickets.models import Comment, Tag, Ticket
 
 
 class TagTestCase(TestCase):

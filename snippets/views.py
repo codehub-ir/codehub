@@ -1,12 +1,10 @@
-from django.views.generic import CreateView, DetailView
-from rest_framework.generics import CreateAPIView, RetrieveAPIView, ListAPIView
-
-from .models import Snippet
-from .forms import SnippetCreateForm
-
-from .serializers import SnippetSerializer
 from django.shortcuts import get_object_or_404
+from django.views.generic import CreateView, DetailView
+from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView
 
+from .forms import SnippetCreateForm
+from .models import Snippet
+from .serializers import SnippetSerializer
 
 # Template Views
 
