@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # apps
     'main',
     'accounts',
+    'snippets',
+    'tickets',
 
     # 3rd party pkgs
     'django_jalali',
