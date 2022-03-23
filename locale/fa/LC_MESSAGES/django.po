@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 16:17+0000\n"
+"POT-Creation-Date: 2022-03-23 20:14+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,79 +18,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: account/forms.py:26
+#: accounts/forms.py:25
 msgid "Signup"
 msgstr "ثبت‌نام"
 
-#: account/forms.py:49 account/forms.py:66
+#: accounts/forms.py:48 accounts/forms.py:65
 msgid "Update"
 msgstr "بروزرسانی"
 
-#: account/models.py:10
+#: accounts/models.py:9
 msgid "Display Name"
 msgstr "نام قابل نمایش"
 
-#: account/models.py:14
+#: accounts/models.py:13
 msgid "Email Address"
 msgstr "آدرس ایمیل"
 
-#: account/models.py:17
+#: accounts/models.py:16
 msgid "Twitter Address"
 msgstr "آدرس توئیتر"
 
-#: account/models.py:21
+#: accounts/models.py:20
 msgid "Github Address"
 msgstr "آدرس گیت هاب"
 
-#: main/constants.py:35
-msgid "Reject"
-msgstr "رد"
-
-#: main/constants.py:36
-msgid "Approve"
-msgstr "تائید"
-
-#: main/constants.py:37
-msgid "Pending"
-msgstr "در انتظار"
-
-#: main/forms.py:26 main/forms.py:50
+#: main/forms.py:25 main/forms.py:49 snippets/forms.py:25 tickets/forms.py:29
 msgid "Create"
 msgstr "بساز"
 
-#: main/forms.py:43
+#: main/forms.py:42 tickets/forms.py:22
 msgid "How can I convert `count` variable in.."
-msgstr "**چجوری** متغیر `count` در کدم رو تغییر بدم..\n\r```\nint count = 5;\nSystem.Console.WriteLine(count); // should be String\n```"
+msgstr ""
+"**چجوری** متغیر `count` در کدم رو تغییر بدم..\n"
+"\r```\n"
+"int count = 5;\n"
+"System.Console.WriteLine(count); // should be String\n"
+"```"
 
-#: main/forms.py:67
+#: main/forms.py:66 tickets/forms.py:46
 msgid "Comment"
 msgstr "ثبت نظر"
 
-#: main/models.py:23 main/models.py:91
+#: snippets/models.py:20 tickets/models.py:35
 msgid "Title"
 msgstr "عنوان"
 
-#: main/models.py:28 main/models.py:95
+#: snippets/models.py:25 tickets/models.py:39
 msgid "Description"
 msgstr "توضیحات"
 
-#: main/models.py:32
+#: snippets/models.py:29
 msgid "Script"
 msgstr "کد"
 
-#: main/models.py:35
+#: snippets/models.py:32
 msgid "Programming Language"
 msgstr "زبان برنامه‌نویسی"
 
-#: main/models.py:99
+#: tickets/constants.py:11
+msgid "Reject"
+msgstr "رد"
+
+#: tickets/constants.py:12
+msgid "Approve"
+msgstr "تائید"
+
+#: tickets/constants.py:13
+msgid "Pending"
+msgstr "در انتظار"
+
+#: tickets/models.py:43
 msgid "Tags"
 msgstr "تگ ها"
 
-#: main/models.py:105
+#: tickets/models.py:49
 msgid "Validation"
 msgstr "اعتبارسنجی"
 
-#: main/models.py:139
+#: tickets/models.py:83
 msgid "Comment Body"
 msgstr "نظر"
 
