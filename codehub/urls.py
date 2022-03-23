@@ -28,4 +28,6 @@ urlpatterns = [
 
     # URLs
     path('', include('main.urls')),
+    path('', include('snippets.urls')),
+    path('', include('tickets.urls')),
 ]
