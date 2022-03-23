@@ -5,7 +5,7 @@ from django.utils.translation import gettext as _
 from django.urls import reverse
 from django_jalali.db import models as jmodels
 
-from account.models import User
+from accounts.models import User
 
 from .constants import LANGUAGES, VERIFICATIONS
 from .utils import generateUID

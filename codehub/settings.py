@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # apps
     'main',
-    'account',
+    'accounts',
 
     # 3rd party pkgs
     'django_jalali',
@@ -160,7 +160,7 @@ TIME_ZONE = 'Asia/Tehran'
 
 # User Authentication Setup
 
-AUTH_USER_MODEL = 'account.User'
+AUTH_USER_MODEL = 'accounts.User'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = reverse_lazy('login')

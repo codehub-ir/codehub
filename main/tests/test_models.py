@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from account.models import User
+from accounts.models import User
 from main.constants import LANGUAGES
 from main.models import Comment, Snippet, Tag, Ticket
 

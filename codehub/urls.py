@@ -23,7 +23,7 @@ urlpatterns = [
     path(config('ADMIN_PATH'), admin.site.urls),
 
     # Accounting URLs
-    path('', include('account.urls')),
+    path('', include('accounts.urls')),
     path('', include('django.contrib.auth.urls')),
 
     # URLs
