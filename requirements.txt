@@ -5,7 +5,7 @@ certifi==2021.10.8
 charset-normalizer==2.0.9
 coreapi==2.3.3
 coreschema==0.0.4
-Django==4.0.3
+Django==4.0.4
 django-crispy-forms==1.13.0
 django-hashids==0.5.0
 django-jalali==5.0.0
